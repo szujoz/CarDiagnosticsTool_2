@@ -49,7 +49,7 @@ namespace OrientApp
         public E_MsgName Name { get; set; }
         public E_MsgType Type { get; set; }
 
-        public TraceData (E_MsgName name, E_MsgType type, int ofs, int len, int dec)
+        public TraceData (E_MsgName name, E_MsgType type, int ofs, int len, int dec = 0)
         {
             Name = name;
             Type = type;
