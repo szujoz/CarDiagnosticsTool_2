@@ -32,13 +32,13 @@ namespace OrientApp
             
             // DEBUG
             // DistSharp = 277cm, InertAccX = 1.52
-            string str = "AA111002770104710152000000000012000022000000000000000000999999999900000999990000000000000000000000000000000000";
-            byte[] data = Encoding.ASCII.GetBytes(str);
-            ThreadPool.QueueUserWorkItem(StoreAndDisplayCarData, new object[] { data });
+            //string str = "AA111002770104710152000000000012000022000000000000000000999999999900000999990000000000000000000000000000000000";
+            //byte[] data = Encoding.ASCII.GetBytes(str);
+            //ThreadPool.QueueUserWorkItem(StoreAndDisplayCarData, new object[] { data });
 
-            str = "AA11100277010471015205500084561205502200004457888800000999999999900000999990000000000000000000000000000000000";
-            data = Encoding.ASCII.GetBytes(str);
-            ThreadPool.QueueUserWorkItem(StoreAndDisplayCarData, new object[] { data });
+            //str = "AA11100277010471015205500084561205502200004457888800000999999999900000999990000000000000000000000000000000000";
+            //data = Encoding.ASCII.GetBytes(str);
+            //ThreadPool.QueueUserWorkItem(StoreAndDisplayCarData, new object[] { data });
             
             //tb_InertialAccelerationX.Text = CarStatus.InertAccel.X.ToString();
             //tb_DistanceSensorRear.Text = CarStatus.DistSharp1.ToString();
@@ -66,13 +66,14 @@ namespace OrientApp
 
         private void DisplayReceivedSerialBytes (Object obj)
         {
-            // Convert param to bytes.
-            object[] array = obj as object[];
-            byte[] bytes = array[0] as byte[];
-
             // Common resource, must be protected.
             lock (MsgList)
             {
+                // Convert param to bytes.
+                object[] array = obj as object[];
+                string str = array[0].ToString();
+                byte[] bytes = Encoding.ASCII.GetBytes(str);
+
                 MsgList.Add(bytes);
 
                 if (MsgList.Count == MsgList.Capacity)
@@ -84,23 +85,45 @@ namespace OrientApp
 
         private void StoreAndDisplayCarData (Object obj)
         {
-            // Convert param to bytes.
-            object[] array = obj as object[];
-            byte[] bytes = array[0] as byte[];
-
             lock (CarStatus)
             {
-                CarStatus.ProcessBytes(bytes);
+                object[] array = obj as object[];
+                string str = array[0].ToString();
+                byte[] bytes = Encoding.ASCII.GetBytes(str);
 
-                if (InvokeRequired)
+                if (CheckMessageLenght(bytes))
                 {
-                    Invoke(new FormWriterDelegate(UpdateUI));
-                }
-                else
-                {
-                    UpdateUI();
+                    CarStatus.ProcessBytes(bytes);
+
+                    if (InvokeRequired)
+                    {
+                        Invoke(new FormWriterDelegate(UpdateUI));
+                    }
+                    else
+                    {
+                        UpdateUI();
+                    }
                 }
             }
+        }
+
+        private bool CheckMessageLenght (byte[] msg)
+        {
+            bool fullMessage = false;
+            int messageLen = 0;
+
+            if (msg[0] == 'A' && msg[1] == 'A')
+            {
+                // Read out the lenght (-1 because of the \r\n).
+                messageLen = (msg[2] - '0') * 100 + (msg[3] - '0') * 10 + (msg[4] - '0') - 1;
+
+                if (msg.Length == messageLen)
+                {
+                    fullMessage = true;
+                }
+            }
+
+            return fullMessage;
         }
 
         private delegate void FormWriterDelegate ();
@@ -115,7 +138,7 @@ namespace OrientApp
 
             foreach (var elem in MsgList)
             {
-                rtb_SerialData.Text += Encoding.Default.GetString(elem);
+                rtb_SerialData.Text = Encoding.ASCII.GetString(elem) + rtb_SerialData.Text;
                 rtb_SerialData.Text += "\r\n";
             }
 

@@ -35,19 +35,23 @@ namespace OrientApp
 
         public double UnwrapFloat (byte[] array, int ofs, int len, int dec)
         {
-            double result;
-            byte[] temp = new byte[len];
+            double result = 0;
 
-            for (int i = 0; i < len; i++)
+            if (array != null)
             {
-                temp[i] = array[ofs + i];
-            }
+                byte[] temp = new byte[len];
 
-            result = UnwrapInt(temp, 0, len);
+                for (int i = 0; i < len; i++)
+                {
+                    temp[i] = array[ofs + i];
+                }
 
-            for (int i = 0; i < dec; i++)
-            {
-                result /= 10;
+                result = UnwrapInt(temp, 0, len);
+
+                for (int i = 0; i < dec; i++)
+                {
+                    result /= 10;
+                }
             }
 
             return result;
@@ -56,29 +60,33 @@ namespace OrientApp
         public int UnwrapInt (byte[] array, int ofs, int len)
         {
             int result = 0;
-            byte[] temp = new byte[len];
-
-            for (int i = 0; i < len; i++)
+            
+            if (array != null)
             {
-                temp[i] = array[ofs + i];
-            }
+                byte[] temp = new byte[len];
 
-            if (Encoding.Default.GetString(temp)[0] == '-')
-            {
-                for (int i = 1; i < len; i++)
-                {
-                    result *= 10;
-                    result += Encoding.ASCII.GetString(temp)[i] - '0';                    
-                }
-
-                result *= -1;
-            }
-            else
-            {
                 for (int i = 0; i < len; i++)
                 {
-                    result *= 10;
-                    result += Encoding.ASCII.GetString(temp)[i] - '0';                    
+                    temp[i] = array[ofs + i];
+                }
+
+                if (Encoding.Default.GetString(temp)[0] == '-')
+                {
+                    for (int i = 1; i < len; i++)
+                    {
+                        result *= 10;
+                        result += Encoding.ASCII.GetString(temp)[i] - '0';
+                    }
+
+                    result *= -1;
+                }
+                else
+                {
+                    for (int i = 0; i < len; i++)
+                    {
+                        result *= 10;
+                        result += Encoding.ASCII.GetString(temp)[i] - '0';
+                    }
                 }
             }
 

@@ -10,31 +10,55 @@ namespace OrientApp
     {
         public enum E_MsgName
         {
-            eDistSharp1 = 0,
+            eNaviN = 0,
+            eNaviE,
+            eNaviPsi,
+            eEncoderVelocity,
             eDistTof1,
             eDistTof2,
             eDistTof3,
-            eServoAngle,
-            eSteeringWheelAngle,
+            eDistSharp1,
             eInertAccelerationX,
             eInertAccelerationY,
             eInertAccelerationZ,
             eInertAngularVelocityX,
             eInertAngularVelocityY,
             eInertAngularVelocityZ,
-            eEncoderVelocity,
-            eNaviN,
-            eNaviE,
-            eNaviPsi,
+            eSteeringWheelAngle,
+            eServoAngle,
+
             eMotorMainBatVolt,
             eMotorSecBatVolt,
             eMotorCurrent,
             eMotorSysCurrent,
             eMotorServoCurrent,
+
             eLineNumOfLine,
-            eLinePositionOfLine1,
-            eLinePositionOfLine2,
-            eCollWarnSharp1
+            eLineMainLinePos,
+            eLineSecLinePos,
+
+            eMazeMainSM,
+            eMazeGetKp,
+            eMazeGetKd,
+            eMazeGetSpeed,
+            eMazeSegments,
+            eMazeActState,
+            eMazeActKp,
+            eMazeActKd,
+            eMazeActSpeed,
+            eMazeInclinSegment,
+
+            eSRunMainSM,
+            eSRunActState,
+            eSRunActP,
+            eSRunActKp,
+            eSRunActKd,
+            eSRunActSpeed,
+            eSRunGetP,
+            eSRunGetKp,
+            eSRunGetKd,
+            eSRunGetSpeed
+
         };
 
         public enum E_MsgType
