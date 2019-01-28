@@ -32,14 +32,16 @@ namespace OrientApp
             
             // DEBUG
             // DistSharp = 277cm, InertAccX = 1.52
-            string str = "AA11100277010471015200000000000000000000000000000000000999999999900000999990000000000000000000000000000000000";
+            string str = "AA111002770104710152000000000012000022000000000000000000999999999900000999990000000000000000000000000000000000";
             byte[] data = Encoding.ASCII.GetBytes(str);
-
             ThreadPool.QueueUserWorkItem(StoreAndDisplayCarData, new object[] { data });
 
-            CarStatus.ProcessBytes(data);
-            tb_InertialAccelerationX.Text = CarStatus.InertAccel.X.ToString();
-            tb_DistanceSensorRear.Text = CarStatus.DistSharp1.ToString();
+            str = "AA11100277010471015205500084561205502200004457888800000999999999900000999990000000000000000000000000000000000";
+            data = Encoding.ASCII.GetBytes(str);
+            ThreadPool.QueueUserWorkItem(StoreAndDisplayCarData, new object[] { data });
+            
+            //tb_InertialAccelerationX.Text = CarStatus.InertAccel.X.ToString();
+            //tb_DistanceSensorRear.Text = CarStatus.DistSharp1.ToString();
 
             // END DEBUG
 
@@ -62,11 +64,11 @@ namespace OrientApp
             ThreadPool.QueueUserWorkItem(StoreAndDisplayCarData,     new object[] { line });
         }
 
-        public void DisplayReceivedSerialBytes (Object obj)
+        private void DisplayReceivedSerialBytes (Object obj)
         {
             // Convert param to bytes.
             object[] array = obj as object[];
-            byte[] bytes = Encoding.ASCII.GetBytes(array[0].ToString());
+            byte[] bytes = array[0] as byte[];
 
             // Common resource, must be protected.
             lock (MsgList)
@@ -80,11 +82,11 @@ namespace OrientApp
             }
         }
 
-        public void StoreAndDisplayCarData (Object obj)
+        private void StoreAndDisplayCarData (Object obj)
         {
             // Convert param to bytes.
             object[] array = obj as object[];
-            byte[] bytes = Encoding.ASCII.GetBytes(array[0].ToString());
+            byte[] bytes = array[0] as byte[];
 
             lock (CarStatus)
             {
@@ -94,13 +96,16 @@ namespace OrientApp
                 {
                     Invoke(new FormWriterDelegate(UpdateUI));
                 }
+                else
+                {
+                    UpdateUI();
+                }
             }
-
         }
 
-        public delegate void FormWriterDelegate ();
+        private delegate void FormWriterDelegate ();
 
-        public void WriteRichTextBox ()
+        private void WriteRichTextBox ()
         {
             if (cntr == 10)
             {
@@ -118,7 +123,10 @@ namespace OrientApp
             cntr++;
         }
 
-        public void UpdateUI ()
+        /// <summary>
+        /// This method reads out the data from the CarStatus object and displays them on the UI in the appropriate textbox.
+        /// </summary>
+        private void UpdateUI ()
         {
             // Navigation Data group box.
             tb_NaviPoistionNorth.Text = CarStatus.NaviState.Poistion.Y.ToString();
@@ -174,6 +182,47 @@ namespace OrientApp
             {
 
                 throw;
+            }
+        }
+
+        private void tb_BoardMotorMainBatteryVoltage_TextChanged(object sender, EventArgs e)
+        {
+            AdjustMainBatteryTrackBar();
+        }
+
+        private void trackBar_BoardMotorMainBatteryVoltage_Scroll(object sender, EventArgs e)
+        {
+            AdjustMainBatteryTrackBar();
+        }
+
+        private void AdjustMainBatteryTrackBar ()
+        {
+            double maxVoltage = 12;
+            double load = Convert.ToDouble(tb_BoardMotorMainBatteryVoltage.Text) / maxVoltage * 100;
+
+            if (load > 100)
+            {
+                load = 100;
+            }
+            else if (load < 0)
+            {
+                load = 0;
+            }
+
+            trackBar_BoardMotorMainBatteryVoltage.Value = Convert.ToInt32(load);
+        }
+
+        private void tb_SerialStatusInfo_TextChanged(object sender, EventArgs e)
+        {
+            if (serialPort.IsOpen)
+            {
+                tb_SerialStatusInfo.Text = "Open";
+                tb_SerialStatusInfo.ForeColor = Color.Green;
+            }
+            else
+            {
+                tb_SerialStatusInfo.Text = "Closed";
+                tb_SerialStatusInfo.ForeColor = Color.Red;
             }
         }
     }

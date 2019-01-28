@@ -144,6 +144,12 @@
             this.tb_MazeParametersActualKD = new System.Windows.Forms.TextBox();
             this.label_MazeParametersKP = new System.Windows.Forms.Label();
             this.tb_MazeParametersActualKP = new System.Windows.Forms.TextBox();
+            this.tb_MazeParametersGetSpeed = new System.Windows.Forms.TextBox();
+            this.tb_MazeParametersGetKD = new System.Windows.Forms.TextBox();
+            this.tb_MazeParametersGetKP = new System.Windows.Forms.TextBox();
+            this.tb_MazeParametersGetState = new System.Windows.Forms.TextBox();
+            this.label_MazeParametersGetValue = new System.Windows.Forms.Label();
+            this.btn_MazeParametersGetParams = new System.Windows.Forms.Button();
             this.gb_ParametersSpeedRun.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -181,7 +187,7 @@
             // 
             this.tb_NaviPoistionNorth.Location = new System.Drawing.Point(31, 26);
             this.tb_NaviPoistionNorth.Name = "tb_NaviPoistionNorth";
-            this.tb_NaviPoistionNorth.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tb_NaviPoistionNorth.ReadOnly = true;
             this.tb_NaviPoistionNorth.Size = new System.Drawing.Size(50, 20);
             this.tb_NaviPoistionNorth.TabIndex = 0;
             this.tb_NaviPoistionNorth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -190,6 +196,7 @@
             // 
             this.tb_NaviPoistionEast.Location = new System.Drawing.Point(31, 52);
             this.tb_NaviPoistionEast.Name = "tb_NaviPoistionEast";
+            this.tb_NaviPoistionEast.ReadOnly = true;
             this.tb_NaviPoistionEast.Size = new System.Drawing.Size(50, 20);
             this.tb_NaviPoistionEast.TabIndex = 1;
             this.tb_NaviPoistionEast.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -225,6 +232,7 @@
             // 
             this.tb_NaviOrientation.Location = new System.Drawing.Point(31, 78);
             this.tb_NaviOrientation.Name = "tb_NaviOrientation";
+            this.tb_NaviOrientation.ReadOnly = true;
             this.tb_NaviOrientation.Size = new System.Drawing.Size(50, 20);
             this.tb_NaviOrientation.TabIndex = 4;
             this.tb_NaviOrientation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -247,9 +255,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_ParametersSpeedRun.Controls.Add(this.label8);
             this.gb_ParametersSpeedRun.Controls.Add(this.textBox5);
-            this.gb_ParametersSpeedRun.Location = new System.Drawing.Point(496, 137);
+            this.gb_ParametersSpeedRun.Location = new System.Drawing.Point(456, 264);
             this.gb_ParametersSpeedRun.Name = "gb_ParametersSpeedRun";
-            this.gb_ParametersSpeedRun.Size = new System.Drawing.Size(415, 381);
+            this.gb_ParametersSpeedRun.Size = new System.Drawing.Size(455, 254);
             this.gb_ParametersSpeedRun.TabIndex = 7;
             this.gb_ParametersSpeedRun.TabStop = false;
             this.gb_ParametersSpeedRun.Text = "Speed Run Parameters";
@@ -397,6 +405,7 @@
             // 
             this.tb_BoardLineSecondLinePos.Location = new System.Drawing.Point(105, 61);
             this.tb_BoardLineSecondLinePos.Name = "tb_BoardLineSecondLinePos";
+            this.tb_BoardLineSecondLinePos.ReadOnly = true;
             this.tb_BoardLineSecondLinePos.Size = new System.Drawing.Size(50, 20);
             this.tb_BoardLineSecondLinePos.TabIndex = 34;
             this.tb_BoardLineSecondLinePos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -405,6 +414,7 @@
             // 
             this.tb_BoardLineMainLinePos.Location = new System.Drawing.Point(105, 39);
             this.tb_BoardLineMainLinePos.Name = "tb_BoardLineMainLinePos";
+            this.tb_BoardLineMainLinePos.ReadOnly = true;
             this.tb_BoardLineMainLinePos.Size = new System.Drawing.Size(50, 20);
             this.tb_BoardLineMainLinePos.TabIndex = 33;
             this.tb_BoardLineMainLinePos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -413,6 +423,7 @@
             // 
             this.tb_BoardLineLineNumber.Location = new System.Drawing.Point(105, 17);
             this.tb_BoardLineLineNumber.Name = "tb_BoardLineLineNumber";
+            this.tb_BoardLineLineNumber.ReadOnly = true;
             this.tb_BoardLineLineNumber.Size = new System.Drawing.Size(50, 20);
             this.tb_BoardLineLineNumber.TabIndex = 24;
             this.tb_BoardLineLineNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -541,6 +552,7 @@
             // 
             this.tb_BoardMotorServoCurrent.Location = new System.Drawing.Point(108, 175);
             this.tb_BoardMotorServoCurrent.Name = "tb_BoardMotorServoCurrent";
+            this.tb_BoardMotorServoCurrent.ReadOnly = true;
             this.tb_BoardMotorServoCurrent.Size = new System.Drawing.Size(50, 20);
             this.tb_BoardMotorServoCurrent.TabIndex = 41;
             this.tb_BoardMotorServoCurrent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -549,6 +561,7 @@
             // 
             this.tb_BoardMotorSystemCurrent.Location = new System.Drawing.Point(108, 124);
             this.tb_BoardMotorSystemCurrent.Name = "tb_BoardMotorSystemCurrent";
+            this.tb_BoardMotorSystemCurrent.ReadOnly = true;
             this.tb_BoardMotorSystemCurrent.Size = new System.Drawing.Size(50, 20);
             this.tb_BoardMotorSystemCurrent.TabIndex = 40;
             this.tb_BoardMotorSystemCurrent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -557,6 +570,7 @@
             // 
             this.tb_BoardMotorMotorCurrent.Location = new System.Drawing.Point(108, 73);
             this.tb_BoardMotorMotorCurrent.Name = "tb_BoardMotorMotorCurrent";
+            this.tb_BoardMotorMotorCurrent.ReadOnly = true;
             this.tb_BoardMotorMotorCurrent.Size = new System.Drawing.Size(50, 20);
             this.tb_BoardMotorMotorCurrent.TabIndex = 39;
             this.tb_BoardMotorMotorCurrent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -565,6 +579,7 @@
             // 
             this.tb_BoardMotorSecondaryBatteryVoltage.Location = new System.Drawing.Point(108, 20);
             this.tb_BoardMotorSecondaryBatteryVoltage.Name = "tb_BoardMotorSecondaryBatteryVoltage";
+            this.tb_BoardMotorSecondaryBatteryVoltage.ReadOnly = true;
             this.tb_BoardMotorSecondaryBatteryVoltage.Size = new System.Drawing.Size(50, 20);
             this.tb_BoardMotorSecondaryBatteryVoltage.TabIndex = 38;
             this.tb_BoardMotorSecondaryBatteryVoltage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -582,9 +597,11 @@
             // 
             this.tb_BoardMotorMainBatteryVoltage.Location = new System.Drawing.Point(8, 175);
             this.tb_BoardMotorMainBatteryVoltage.Name = "tb_BoardMotorMainBatteryVoltage";
+            this.tb_BoardMotorMainBatteryVoltage.ReadOnly = true;
             this.tb_BoardMotorMainBatteryVoltage.Size = new System.Drawing.Size(50, 20);
             this.tb_BoardMotorMainBatteryVoltage.TabIndex = 23;
             this.tb_BoardMotorMainBatteryVoltage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb_BoardMotorMainBatteryVoltage.TextChanged += new System.EventHandler(this.tb_BoardMotorMainBatteryVoltage_TextChanged);
             // 
             // trackBar_BoardMotorMainBatteryVoltage
             // 
@@ -595,6 +612,7 @@
             this.trackBar_BoardMotorMainBatteryVoltage.Size = new System.Drawing.Size(45, 150);
             this.trackBar_BoardMotorMainBatteryVoltage.TabIndex = 0;
             this.trackBar_BoardMotorMainBatteryVoltage.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar_BoardMotorMainBatteryVoltage.Scroll += new System.EventHandler(this.trackBar_BoardMotorMainBatteryVoltage_Scroll);
             // 
             // gb_SteeringWheel
             // 
@@ -635,6 +653,7 @@
             // 
             this.tb_SteeringWheelAngle.Location = new System.Drawing.Point(86, 30);
             this.tb_SteeringWheelAngle.Name = "tb_SteeringWheelAngle";
+            this.tb_SteeringWheelAngle.ReadOnly = true;
             this.tb_SteeringWheelAngle.Size = new System.Drawing.Size(50, 20);
             this.tb_SteeringWheelAngle.TabIndex = 42;
             this.tb_SteeringWheelAngle.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -663,7 +682,7 @@
             // label_EncoderVelocity
             // 
             this.label_EncoderVelocity.AutoSize = true;
-            this.label_EncoderVelocity.Location = new System.Drawing.Point(6, 27);
+            this.label_EncoderVelocity.Location = new System.Drawing.Point(6, 31);
             this.label_EncoderVelocity.Name = "label_EncoderVelocity";
             this.label_EncoderVelocity.Size = new System.Drawing.Size(44, 13);
             this.label_EncoderVelocity.TabIndex = 49;
@@ -671,8 +690,9 @@
             // 
             // tb_EncoderVelocity
             // 
-            this.tb_EncoderVelocity.Location = new System.Drawing.Point(6, 44);
+            this.tb_EncoderVelocity.Location = new System.Drawing.Point(6, 48);
             this.tb_EncoderVelocity.Name = "tb_EncoderVelocity";
+            this.tb_EncoderVelocity.ReadOnly = true;
             this.tb_EncoderVelocity.Size = new System.Drawing.Size(50, 20);
             this.tb_EncoderVelocity.TabIndex = 31;
             this.tb_EncoderVelocity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -680,7 +700,7 @@
             // label_m_s01
             // 
             this.label_m_s01.AutoSize = true;
-            this.label_m_s01.Location = new System.Drawing.Point(60, 48);
+            this.label_m_s01.Location = new System.Drawing.Point(60, 52);
             this.label_m_s01.Name = "label_m_s01";
             this.label_m_s01.Size = new System.Drawing.Size(25, 13);
             this.label_m_s01.TabIndex = 23;
@@ -782,6 +802,7 @@
             // 
             this.tb_DistanceSensorRear.Location = new System.Drawing.Point(11, 214);
             this.tb_DistanceSensorRear.Name = "tb_DistanceSensorRear";
+            this.tb_DistanceSensorRear.ReadOnly = true;
             this.tb_DistanceSensorRear.Size = new System.Drawing.Size(50, 20);
             this.tb_DistanceSensorRear.TabIndex = 23;
             this.tb_DistanceSensorRear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -790,6 +811,7 @@
             // 
             this.tb_DistanceSensorRight.Location = new System.Drawing.Point(79, 136);
             this.tb_DistanceSensorRight.Name = "tb_DistanceSensorRight";
+            this.tb_DistanceSensorRight.ReadOnly = true;
             this.tb_DistanceSensorRight.Size = new System.Drawing.Size(50, 20);
             this.tb_DistanceSensorRight.TabIndex = 22;
             this.tb_DistanceSensorRight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -798,6 +820,7 @@
             // 
             this.tb_DistanceSensorFrontRight.Location = new System.Drawing.Point(70, 71);
             this.tb_DistanceSensorFrontRight.Name = "tb_DistanceSensorFrontRight";
+            this.tb_DistanceSensorFrontRight.ReadOnly = true;
             this.tb_DistanceSensorFrontRight.Size = new System.Drawing.Size(50, 20);
             this.tb_DistanceSensorFrontRight.TabIndex = 21;
             this.tb_DistanceSensorFrontRight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -806,6 +829,7 @@
             // 
             this.tb_DistanceSensorFront.Location = new System.Drawing.Point(11, 48);
             this.tb_DistanceSensorFront.Name = "tb_DistanceSensorFront";
+            this.tb_DistanceSensorFront.ReadOnly = true;
             this.tb_DistanceSensorFront.Size = new System.Drawing.Size(50, 20);
             this.tb_DistanceSensorFront.TabIndex = 20;
             this.tb_DistanceSensorFront.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -869,6 +893,7 @@
             // 
             this.tb_InertialAngularVelocityPhi.Location = new System.Drawing.Point(149, 44);
             this.tb_InertialAngularVelocityPhi.Name = "tb_InertialAngularVelocityPhi";
+            this.tb_InertialAngularVelocityPhi.ReadOnly = true;
             this.tb_InertialAngularVelocityPhi.Size = new System.Drawing.Size(50, 20);
             this.tb_InertialAngularVelocityPhi.TabIndex = 12;
             this.tb_InertialAngularVelocityPhi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -877,6 +902,7 @@
             // 
             this.tb_InertialAngularVelocityTheta.Location = new System.Drawing.Point(149, 70);
             this.tb_InertialAngularVelocityTheta.Name = "tb_InertialAngularVelocityTheta";
+            this.tb_InertialAngularVelocityTheta.ReadOnly = true;
             this.tb_InertialAngularVelocityTheta.Size = new System.Drawing.Size(50, 20);
             this.tb_InertialAngularVelocityTheta.TabIndex = 13;
             this.tb_InertialAngularVelocityTheta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -921,6 +947,7 @@
             // 
             this.tb_InertialAngularVelocityPsi.Location = new System.Drawing.Point(149, 96);
             this.tb_InertialAngularVelocityPsi.Name = "tb_InertialAngularVelocityPsi";
+            this.tb_InertialAngularVelocityPsi.ReadOnly = true;
             this.tb_InertialAngularVelocityPsi.Size = new System.Drawing.Size(50, 20);
             this.tb_InertialAngularVelocityPsi.TabIndex = 16;
             this.tb_InertialAngularVelocityPsi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -938,6 +965,7 @@
             // 
             this.tb_InertialAccelerationX.Location = new System.Drawing.Point(28, 44);
             this.tb_InertialAccelerationX.Name = "tb_InertialAccelerationX";
+            this.tb_InertialAccelerationX.ReadOnly = true;
             this.tb_InertialAccelerationX.Size = new System.Drawing.Size(50, 20);
             this.tb_InertialAccelerationX.TabIndex = 6;
             this.tb_InertialAccelerationX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -946,6 +974,7 @@
             // 
             this.tb_InertialAccelerationY.Location = new System.Drawing.Point(28, 70);
             this.tb_InertialAccelerationY.Name = "tb_InertialAccelerationY";
+            this.tb_InertialAccelerationY.ReadOnly = true;
             this.tb_InertialAccelerationY.Size = new System.Drawing.Size(50, 20);
             this.tb_InertialAccelerationY.TabIndex = 7;
             this.tb_InertialAccelerationY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -972,6 +1001,7 @@
             // 
             this.tb_InertialAccelerationZ.Location = new System.Drawing.Point(28, 96);
             this.tb_InertialAccelerationZ.Name = "tb_InertialAccelerationZ";
+            this.tb_InertialAccelerationZ.ReadOnly = true;
             this.tb_InertialAccelerationZ.Size = new System.Drawing.Size(50, 20);
             this.tb_InertialAccelerationZ.TabIndex = 10;
             this.tb_InertialAccelerationZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1089,6 +1119,7 @@
             this.tb_SerialStatusInfo.TabIndex = 14;
             this.tb_SerialStatusInfo.Text = "Closed";
             this.tb_SerialStatusInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_SerialStatusInfo.TextChanged += new System.EventHandler(this.tb_SerialStatusInfo_TextChanged);
             // 
             // tb_SerialBaude
             // 
@@ -1149,6 +1180,12 @@
             // 
             this.gb_MazeRunParameters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gb_MazeRunParameters.Controls.Add(this.btn_MazeParametersGetParams);
+            this.gb_MazeRunParameters.Controls.Add(this.label_MazeParametersGetValue);
+            this.gb_MazeRunParameters.Controls.Add(this.tb_MazeParametersGetState);
+            this.gb_MazeRunParameters.Controls.Add(this.tb_MazeParametersGetSpeed);
+            this.gb_MazeRunParameters.Controls.Add(this.tb_MazeParametersGetKD);
+            this.gb_MazeRunParameters.Controls.Add(this.tb_MazeParametersGetKP);
             this.gb_MazeRunParameters.Controls.Add(this.tb_MazeParametersSetState);
             this.gb_MazeRunParameters.Controls.Add(this.btn_MazeParametersSetStateTo);
             this.gb_MazeRunParameters.Controls.Add(this.label_MazeParametersResetStateTo);
@@ -1167,16 +1204,16 @@
             this.gb_MazeRunParameters.Controls.Add(this.tb_MazeParametersActualKD);
             this.gb_MazeRunParameters.Controls.Add(this.label_MazeParametersKP);
             this.gb_MazeRunParameters.Controls.Add(this.tb_MazeParametersActualKP);
-            this.gb_MazeRunParameters.Location = new System.Drawing.Point(595, -1);
+            this.gb_MazeRunParameters.Location = new System.Drawing.Point(456, -1);
             this.gb_MazeRunParameters.Name = "gb_MazeRunParameters";
-            this.gb_MazeRunParameters.Size = new System.Drawing.Size(316, 136);
+            this.gb_MazeRunParameters.Size = new System.Drawing.Size(455, 113);
             this.gb_MazeRunParameters.TabIndex = 8;
             this.gb_MazeRunParameters.TabStop = false;
             this.gb_MazeRunParameters.Text = "Maze Parameters";
             // 
             // tb_MazeParametersSetState
             // 
-            this.tb_MazeParametersSetState.Location = new System.Drawing.Point(118, 107);
+            this.tb_MazeParametersSetState.Location = new System.Drawing.Point(255, 55);
             this.tb_MazeParametersSetState.Name = "tb_MazeParametersSetState";
             this.tb_MazeParametersSetState.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetState.TabIndex = 70;
@@ -1184,7 +1221,7 @@
             // 
             // btn_MazeParametersSetStateTo
             // 
-            this.btn_MazeParametersSetStateTo.Location = new System.Drawing.Point(182, 47);
+            this.btn_MazeParametersSetStateTo.Location = new System.Drawing.Point(393, 55);
             this.btn_MazeParametersSetStateTo.Name = "btn_MazeParametersSetStateTo";
             this.btn_MazeParametersSetStateTo.Size = new System.Drawing.Size(50, 22);
             this.btn_MazeParametersSetStateTo.TabIndex = 69;
@@ -1194,7 +1231,7 @@
             // label_MazeParametersResetStateTo
             // 
             this.label_MazeParametersResetStateTo.AutoSize = true;
-            this.label_MazeParametersResetStateTo.Location = new System.Drawing.Point(173, 8);
+            this.label_MazeParametersResetStateTo.Location = new System.Drawing.Point(384, 16);
             this.label_MazeParametersResetStateTo.Name = "label_MazeParametersResetStateTo";
             this.label_MazeParametersResetStateTo.Size = new System.Drawing.Size(70, 13);
             this.label_MazeParametersResetStateTo.TabIndex = 68;
@@ -1202,7 +1239,7 @@
             // 
             // tb_MazeParametersSetStateTo
             // 
-            this.tb_MazeParametersSetStateTo.Location = new System.Drawing.Point(182, 23);
+            this.tb_MazeParametersSetStateTo.Location = new System.Drawing.Point(393, 31);
             this.tb_MazeParametersSetStateTo.Name = "tb_MazeParametersSetStateTo";
             this.tb_MazeParametersSetStateTo.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetStateTo.TabIndex = 67;
@@ -1211,7 +1248,7 @@
             // label_MazeParametersSetValue
             // 
             this.label_MazeParametersSetValue.AutoSize = true;
-            this.label_MazeParametersSetValue.Location = new System.Drawing.Point(115, 22);
+            this.label_MazeParametersSetValue.Location = new System.Drawing.Point(28, 58);
             this.label_MazeParametersSetValue.Name = "label_MazeParametersSetValue";
             this.label_MazeParametersSetValue.Size = new System.Drawing.Size(53, 13);
             this.label_MazeParametersSetValue.TabIndex = 66;
@@ -1220,7 +1257,7 @@
             // label_MazeParametersActualValues
             // 
             this.label_MazeParametersActualValues.AutoSize = true;
-            this.label_MazeParametersActualValues.Location = new System.Drawing.Point(35, 22);
+            this.label_MazeParametersActualValues.Location = new System.Drawing.Point(14, 35);
             this.label_MazeParametersActualValues.Name = "label_MazeParametersActualValues";
             this.label_MazeParametersActualValues.Size = new System.Drawing.Size(67, 13);
             this.label_MazeParametersActualValues.TabIndex = 65;
@@ -1228,7 +1265,7 @@
             // 
             // tb_MazeParametersSetSpeed
             // 
-            this.tb_MazeParametersSetSpeed.Location = new System.Drawing.Point(118, 84);
+            this.tb_MazeParametersSetSpeed.Location = new System.Drawing.Point(199, 55);
             this.tb_MazeParametersSetSpeed.Name = "tb_MazeParametersSetSpeed";
             this.tb_MazeParametersSetSpeed.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetSpeed.TabIndex = 63;
@@ -1236,7 +1273,7 @@
             // 
             // tb_MazeParametersSetKD
             // 
-            this.tb_MazeParametersSetKD.Location = new System.Drawing.Point(118, 61);
+            this.tb_MazeParametersSetKD.Location = new System.Drawing.Point(143, 55);
             this.tb_MazeParametersSetKD.Name = "tb_MazeParametersSetKD";
             this.tb_MazeParametersSetKD.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetKD.TabIndex = 62;
@@ -1244,7 +1281,7 @@
             // 
             // tb_MazeParametersSetKP
             // 
-            this.tb_MazeParametersSetKP.Location = new System.Drawing.Point(118, 38);
+            this.tb_MazeParametersSetKP.Location = new System.Drawing.Point(87, 55);
             this.tb_MazeParametersSetKP.Name = "tb_MazeParametersSetKP";
             this.tb_MazeParametersSetKP.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetKP.TabIndex = 61;
@@ -1253,7 +1290,7 @@
             // label_MazeParametersActualState
             // 
             this.label_MazeParametersActualState.AutoSize = true;
-            this.label_MazeParametersActualState.Location = new System.Drawing.Point(8, 110);
+            this.label_MazeParametersActualState.Location = new System.Drawing.Point(264, 16);
             this.label_MazeParametersActualState.Name = "label_MazeParametersActualState";
             this.label_MazeParametersActualState.Size = new System.Drawing.Size(32, 13);
             this.label_MazeParametersActualState.TabIndex = 60;
@@ -1261,25 +1298,26 @@
             // 
             // tb_MazeParametersActualState
             // 
-            this.tb_MazeParametersActualState.Location = new System.Drawing.Point(46, 107);
+            this.tb_MazeParametersActualState.Location = new System.Drawing.Point(255, 32);
             this.tb_MazeParametersActualState.Name = "tb_MazeParametersActualState";
+            this.tb_MazeParametersActualState.ReadOnly = true;
             this.tb_MazeParametersActualState.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersActualState.TabIndex = 59;
             this.tb_MazeParametersActualState.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn_MazeParametersSendParams
             // 
-            this.btn_MazeParametersSendParams.Location = new System.Drawing.Point(182, 90);
+            this.btn_MazeParametersSendParams.Location = new System.Drawing.Point(314, 55);
             this.btn_MazeParametersSendParams.Name = "btn_MazeParametersSendParams";
-            this.btn_MazeParametersSendParams.Size = new System.Drawing.Size(51, 37);
+            this.btn_MazeParametersSendParams.Size = new System.Drawing.Size(62, 22);
             this.btn_MazeParametersSendParams.TabIndex = 58;
-            this.btn_MazeParametersSendParams.Text = "Send Params";
+            this.btn_MazeParametersSendParams.Text = "Send";
             this.btn_MazeParametersSendParams.UseVisualStyleBackColor = true;
             // 
             // label_MazeParametersSpeed
             // 
             this.label_MazeParametersSpeed.AutoSize = true;
-            this.label_MazeParametersSpeed.Location = new System.Drawing.Point(2, 87);
+            this.label_MazeParametersSpeed.Location = new System.Drawing.Point(205, 16);
             this.label_MazeParametersSpeed.Name = "label_MazeParametersSpeed";
             this.label_MazeParametersSpeed.Size = new System.Drawing.Size(38, 13);
             this.label_MazeParametersSpeed.TabIndex = 55;
@@ -1287,8 +1325,9 @@
             // 
             // tb_MazeParametersActualSpeed
             // 
-            this.tb_MazeParametersActualSpeed.Location = new System.Drawing.Point(46, 84);
+            this.tb_MazeParametersActualSpeed.Location = new System.Drawing.Point(199, 32);
             this.tb_MazeParametersActualSpeed.Name = "tb_MazeParametersActualSpeed";
+            this.tb_MazeParametersActualSpeed.ReadOnly = true;
             this.tb_MazeParametersActualSpeed.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersActualSpeed.TabIndex = 54;
             this.tb_MazeParametersActualSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1296,7 +1335,7 @@
             // label_MazeParametersKD
             // 
             this.label_MazeParametersKD.AutoSize = true;
-            this.label_MazeParametersKD.Location = new System.Drawing.Point(12, 64);
+            this.label_MazeParametersKD.Location = new System.Drawing.Point(151, 16);
             this.label_MazeParametersKD.Name = "label_MazeParametersKD";
             this.label_MazeParametersKD.Size = new System.Drawing.Size(28, 13);
             this.label_MazeParametersKD.TabIndex = 53;
@@ -1304,8 +1343,9 @@
             // 
             // tb_MazeParametersActualKD
             // 
-            this.tb_MazeParametersActualKD.Location = new System.Drawing.Point(46, 61);
+            this.tb_MazeParametersActualKD.Location = new System.Drawing.Point(143, 32);
             this.tb_MazeParametersActualKD.Name = "tb_MazeParametersActualKD";
+            this.tb_MazeParametersActualKD.ReadOnly = true;
             this.tb_MazeParametersActualKD.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersActualKD.TabIndex = 52;
             this.tb_MazeParametersActualKD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1313,7 +1353,7 @@
             // label_MazeParametersKP
             // 
             this.label_MazeParametersKP.AutoSize = true;
-            this.label_MazeParametersKP.Location = new System.Drawing.Point(13, 41);
+            this.label_MazeParametersKP.Location = new System.Drawing.Point(97, 16);
             this.label_MazeParametersKP.Name = "label_MazeParametersKP";
             this.label_MazeParametersKP.Size = new System.Drawing.Size(27, 13);
             this.label_MazeParametersKP.TabIndex = 51;
@@ -1321,11 +1361,65 @@
             // 
             // tb_MazeParametersActualKP
             // 
-            this.tb_MazeParametersActualKP.Location = new System.Drawing.Point(46, 38);
+            this.tb_MazeParametersActualKP.Location = new System.Drawing.Point(87, 32);
             this.tb_MazeParametersActualKP.Name = "tb_MazeParametersActualKP";
+            this.tb_MazeParametersActualKP.ReadOnly = true;
             this.tb_MazeParametersActualKP.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersActualKP.TabIndex = 50;
             this.tb_MazeParametersActualKP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tb_MazeParametersGetSpeed
+            // 
+            this.tb_MazeParametersGetSpeed.Location = new System.Drawing.Point(199, 81);
+            this.tb_MazeParametersGetSpeed.Name = "tb_MazeParametersGetSpeed";
+            this.tb_MazeParametersGetSpeed.ReadOnly = true;
+            this.tb_MazeParametersGetSpeed.Size = new System.Drawing.Size(50, 20);
+            this.tb_MazeParametersGetSpeed.TabIndex = 73;
+            this.tb_MazeParametersGetSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tb_MazeParametersGetKD
+            // 
+            this.tb_MazeParametersGetKD.Location = new System.Drawing.Point(143, 81);
+            this.tb_MazeParametersGetKD.Name = "tb_MazeParametersGetKD";
+            this.tb_MazeParametersGetKD.ReadOnly = true;
+            this.tb_MazeParametersGetKD.Size = new System.Drawing.Size(50, 20);
+            this.tb_MazeParametersGetKD.TabIndex = 72;
+            this.tb_MazeParametersGetKD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tb_MazeParametersGetKP
+            // 
+            this.tb_MazeParametersGetKP.Location = new System.Drawing.Point(87, 81);
+            this.tb_MazeParametersGetKP.Name = "tb_MazeParametersGetKP";
+            this.tb_MazeParametersGetKP.ReadOnly = true;
+            this.tb_MazeParametersGetKP.Size = new System.Drawing.Size(50, 20);
+            this.tb_MazeParametersGetKP.TabIndex = 71;
+            this.tb_MazeParametersGetKP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tb_MazeParametersGetState
+            // 
+            this.tb_MazeParametersGetState.Location = new System.Drawing.Point(255, 81);
+            this.tb_MazeParametersGetState.Name = "tb_MazeParametersGetState";
+            this.tb_MazeParametersGetState.Size = new System.Drawing.Size(50, 20);
+            this.tb_MazeParametersGetState.TabIndex = 74;
+            this.tb_MazeParametersGetState.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label_MazeParametersGetValue
+            // 
+            this.label_MazeParametersGetValue.AutoSize = true;
+            this.label_MazeParametersGetValue.Location = new System.Drawing.Point(28, 84);
+            this.label_MazeParametersGetValue.Name = "label_MazeParametersGetValue";
+            this.label_MazeParametersGetValue.Size = new System.Drawing.Size(54, 13);
+            this.label_MazeParametersGetValue.TabIndex = 75;
+            this.label_MazeParametersGetValue.Text = "Get Value";
+            // 
+            // btn_MazeParametersGetParams
+            // 
+            this.btn_MazeParametersGetParams.Location = new System.Drawing.Point(314, 81);
+            this.btn_MazeParametersGetParams.Name = "btn_MazeParametersGetParams";
+            this.btn_MazeParametersGetParams.Size = new System.Drawing.Size(62, 22);
+            this.btn_MazeParametersGetParams.TabIndex = 76;
+            this.btn_MazeParametersGetParams.Text = "Get";
+            this.btn_MazeParametersGetParams.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1492,6 +1586,12 @@
         private System.Windows.Forms.PictureBox pict_TeamLogo;
         private System.Windows.Forms.PictureBox pic_SteeringWheel;
         private System.Windows.Forms.Label label_deg02;
+        private System.Windows.Forms.TextBox tb_MazeParametersGetSpeed;
+        private System.Windows.Forms.TextBox tb_MazeParametersGetKD;
+        private System.Windows.Forms.TextBox tb_MazeParametersGetKP;
+        private System.Windows.Forms.Button btn_MazeParametersGetParams;
+        private System.Windows.Forms.Label label_MazeParametersGetValue;
+        private System.Windows.Forms.TextBox tb_MazeParametersGetState;
     }
 }
 
