@@ -67,35 +67,49 @@ namespace OrientApp
                     switch (msg.Name)
                     {
                         case TraceData.E_MsgName.eServoAngle:
+                            ServoAngle = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eSteeringWheelAngle:
+                            ServoAngle = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);    // TODO
                             break;
                         case TraceData.E_MsgName.eInertAccelerationX:
                             InertAccel.X = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eInertAccelerationY:
+                            InertAccel.Y = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eInertAccelerationZ:
+                            InertAccel.Z = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eInertAngularVelocityX:
+                            InertAngularVelocity.X = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eInertAngularVelocityY:
+                            InertAngularVelocity.Y = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eInertAngularVelocityZ:
+                            InertAngularVelocity.Z = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eEncoderVelocity:
+                            EncoderVelocity = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eNaviN:
+                            NaviState.Poistion.Y = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eNaviE:
+                            NaviState.Poistion.X = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eNaviPsi:
+                            NaviState.Orientation = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eMotorMainBatVolt:
+                            MotorMainBatVolt = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eMotorSecBatVolt:
+                            MotorSecBatVolt = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_MsgName.eMotorCurrent:
+                            MotorCurrent = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         default:
                             break;
@@ -109,22 +123,39 @@ namespace OrientApp
                             DistSharp1 = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
                         case TraceData.E_MsgName.eDistTof1:
+                            DistTof1 = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
                         case TraceData.E_MsgName.eDistTof2:
+                            DistTof2 = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
                         case TraceData.E_MsgName.eDistTof3:
+                            DistTof3 = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
                         case TraceData.E_MsgName.eMotorSysCurrent:
+                            MotorSysCurrent = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
                         case TraceData.E_MsgName.eMotorServoCurrent:
+                            MotorServoCurrent = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
                         case TraceData.E_MsgName.eLineNumOfLine:
+                            LineNumberOfLines = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
                         case TraceData.E_MsgName.eLinePositionOfLine1:
+                            LinePostionOfLine1 = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
                         case TraceData.E_MsgName.eLinePositionOfLine2:
+                            LinePostionOfLine2 = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
                         case TraceData.E_MsgName.eCollWarnSharp1:
+                            int warn = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
+                            if (warn != 0)
+                            {
+                                CollWarnSharp1 = true;
+                            }
+                            else
+                            {
+                                CollWarnSharp1 = false;
+                            }
                             break;
                         default:
                             break;
