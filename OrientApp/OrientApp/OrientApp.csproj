@@ -106,5 +106,8 @@
   <ItemGroup>
     <None Include="Resources\automotive-steering-wheel2-5121.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpeedRunMap_mini.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

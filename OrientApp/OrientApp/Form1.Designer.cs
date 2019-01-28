@@ -44,7 +44,6 @@
             this.label_mm01 = new System.Windows.Forms.Label();
             this.label_A01 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.pict_TeamLogo = new System.Windows.Forms.PictureBox();
             this.gb_BoardLineInformations = new System.Windows.Forms.GroupBox();
             this.label_mm02 = new System.Windows.Forms.Label();
             this.label_BoardLineSecondLine = new System.Windows.Forms.Label();
@@ -53,7 +52,6 @@
             this.tb_BoardLineSecondLinePos = new System.Windows.Forms.TextBox();
             this.tb_BoardLineMainLinePos = new System.Windows.Forms.TextBox();
             this.tb_BoardLineLineNumber = new System.Windows.Forms.TextBox();
-            this.pic_Car2 = new System.Windows.Forms.PictureBox();
             this.trackBar_BoardLineMainLinePos = new System.Windows.Forms.TrackBar();
             this.trackBar_BoardLineSecondLinePos = new System.Windows.Forms.TrackBar();
             this.gb_BoardMotorInformations = new System.Windows.Forms.GroupBox();
@@ -72,7 +70,6 @@
             this.tb_BoardMotorMainBatteryVoltage = new System.Windows.Forms.TextBox();
             this.trackBar_BoardMotorMainBatteryVoltage = new System.Windows.Forms.TrackBar();
             this.gb_SteeringWheel = new System.Windows.Forms.GroupBox();
-            this.pic_SteeringWheel = new System.Windows.Forms.PictureBox();
             this.label_deg02 = new System.Windows.Forms.Label();
             this.tb_SteeringWheelAngle = new System.Windows.Forms.TextBox();
             this.label_SteeringWheelAngle = new System.Windows.Forms.Label();
@@ -93,7 +90,6 @@
             this.tb_DistanceSensorRight = new System.Windows.Forms.TextBox();
             this.tb_DistanceSensorFrontRight = new System.Windows.Forms.TextBox();
             this.tb_DistanceSensorFront = new System.Windows.Forms.TextBox();
-            this.pic_Car1 = new System.Windows.Forms.PictureBox();
             this.gb_InertialSensor = new System.Windows.Forms.GroupBox();
             this.label_InertialSensorAngularAccelerationName = new System.Windows.Forms.Label();
             this.label_InertialSensorAccelerationName = new System.Windows.Forms.Label();
@@ -126,6 +122,12 @@
             this.btn_Open = new System.Windows.Forms.Button();
             this.cb_SerialComPort = new System.Windows.Forms.ComboBox();
             this.gb_MazeRunParameters = new System.Windows.Forms.GroupBox();
+            this.btn_MazeParametersGetParams = new System.Windows.Forms.Button();
+            this.label_MazeParametersGetValue = new System.Windows.Forms.Label();
+            this.tb_MazeParametersGetState = new System.Windows.Forms.TextBox();
+            this.tb_MazeParametersGetSpeed = new System.Windows.Forms.TextBox();
+            this.tb_MazeParametersGetKD = new System.Windows.Forms.TextBox();
+            this.tb_MazeParametersGetKP = new System.Windows.Forms.TextBox();
             this.tb_MazeParametersSetState = new System.Windows.Forms.TextBox();
             this.btn_MazeParametersSetStateTo = new System.Windows.Forms.Button();
             this.label_MazeParametersResetStateTo = new System.Windows.Forms.Label();
@@ -144,29 +146,66 @@
             this.tb_MazeParametersActualKD = new System.Windows.Forms.TextBox();
             this.label_MazeParametersKP = new System.Windows.Forms.Label();
             this.tb_MazeParametersActualKP = new System.Windows.Forms.TextBox();
-            this.tb_MazeParametersGetSpeed = new System.Windows.Forms.TextBox();
-            this.tb_MazeParametersGetKD = new System.Windows.Forms.TextBox();
-            this.tb_MazeParametersGetKP = new System.Windows.Forms.TextBox();
-            this.tb_MazeParametersGetState = new System.Windows.Forms.TextBox();
-            this.label_MazeParametersGetValue = new System.Windows.Forms.Label();
-            this.btn_MazeParametersGetParams = new System.Windows.Forms.Button();
+            this.pict_TeamLogo = new System.Windows.Forms.PictureBox();
+            this.pic_Car2 = new System.Windows.Forms.PictureBox();
+            this.pic_SteeringWheel = new System.Windows.Forms.PictureBox();
+            this.pic_Car1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.gb_NaviMap = new System.Windows.Forms.GroupBox();
+            this.gb_Scope = new System.Windows.Forms.GroupBox();
             this.gb_ParametersSpeedRun.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pict_TeamLogo)).BeginInit();
             this.gb_BoardLineInformations.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Car2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_BoardLineMainLinePos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_BoardLineSecondLinePos)).BeginInit();
             this.gb_BoardMotorInformations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_BoardMotorMainBatteryVoltage)).BeginInit();
             this.gb_SteeringWheel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_SteeringWheel)).BeginInit();
             this.bg_Encoder.SuspendLayout();
             this.gb_DistanceSensors.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Car1)).BeginInit();
             this.gb_InertialSensor.SuspendLayout();
             this.gb_NavigationData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -175,6 +214,11 @@
             this.splitContainer2.SuspendLayout();
             this.gb_SerialContainer.SuspendLayout();
             this.gb_MazeRunParameters.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pict_TeamLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Car2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SteeringWheel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Car1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // serialPort
@@ -242,9 +286,9 @@
             this.rtb_SerialData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtb_SerialData.Location = new System.Drawing.Point(211, 12);
+            this.rtb_SerialData.Location = new System.Drawing.Point(176, 12);
             this.rtb_SerialData.Name = "rtb_SerialData";
-            this.rtb_SerialData.Size = new System.Drawing.Size(682, 121);
+            this.rtb_SerialData.Size = new System.Drawing.Size(733, 121);
             this.rtb_SerialData.TabIndex = 6;
             this.rtb_SerialData.Text = "";
             // 
@@ -253,11 +297,47 @@
             this.gb_ParametersSpeedRun.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gb_ParametersSpeedRun.Controls.Add(this.label8);
+            this.gb_ParametersSpeedRun.Controls.Add(this.label11);
+            this.gb_ParametersSpeedRun.Controls.Add(this.button4);
+            this.gb_ParametersSpeedRun.Controls.Add(this.button3);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox16);
+            this.gb_ParametersSpeedRun.Controls.Add(this.label10);
+            this.gb_ParametersSpeedRun.Controls.Add(this.label9);
+            this.gb_ParametersSpeedRun.Controls.Add(this.checkBox6);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox1);
+            this.gb_ParametersSpeedRun.Controls.Add(this.checkBox5);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox12);
+            this.gb_ParametersSpeedRun.Controls.Add(this.checkBox3);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox11);
+            this.gb_ParametersSpeedRun.Controls.Add(this.checkBox4);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox4);
+            this.gb_ParametersSpeedRun.Controls.Add(this.checkBox2);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox7);
+            this.gb_ParametersSpeedRun.Controls.Add(this.checkBox1);
             this.gb_ParametersSpeedRun.Controls.Add(this.textBox5);
-            this.gb_ParametersSpeedRun.Location = new System.Drawing.Point(456, 264);
+            this.gb_ParametersSpeedRun.Controls.Add(this.pictureBox1);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox10);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox2);
+            this.gb_ParametersSpeedRun.Controls.Add(this.label8);
+            this.gb_ParametersSpeedRun.Controls.Add(this.label5);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox8);
+            this.gb_ParametersSpeedRun.Controls.Add(this.label4);
+            this.gb_ParametersSpeedRun.Controls.Add(this.button2);
+            this.gb_ParametersSpeedRun.Controls.Add(this.label6);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox15);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox6);
+            this.gb_ParametersSpeedRun.Controls.Add(this.label1);
+            this.gb_ParametersSpeedRun.Controls.Add(this.label3);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox9);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox13);
+            this.gb_ParametersSpeedRun.Controls.Add(this.button1);
+            this.gb_ParametersSpeedRun.Controls.Add(this.label7);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox14);
+            this.gb_ParametersSpeedRun.Controls.Add(this.textBox3);
+            this.gb_ParametersSpeedRun.Controls.Add(this.label2);
+            this.gb_ParametersSpeedRun.Location = new System.Drawing.Point(456, 222);
             this.gb_ParametersSpeedRun.Name = "gb_ParametersSpeedRun";
-            this.gb_ParametersSpeedRun.Size = new System.Drawing.Size(455, 254);
+            this.gb_ParametersSpeedRun.Size = new System.Drawing.Size(464, 296);
             this.gb_ParametersSpeedRun.TabIndex = 7;
             this.gb_ParametersSpeedRun.TabStop = false;
             this.gb_ParametersSpeedRun.Text = "Speed Run Parameters";
@@ -265,15 +345,15 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(27, 43);
+            this.label8.Location = new System.Drawing.Point(6, 37);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 13);
+            this.label8.Size = new System.Drawing.Size(32, 13);
             this.label8.TabIndex = 49;
-            this.label8.Text = "Main Battery";
+            this.label8.Text = "State";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(99, 40);
+            this.textBox5.Location = new System.Drawing.Point(155, 34);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(50, 20);
             this.textBox5.TabIndex = 43;
@@ -331,18 +411,6 @@
             this.splitContainer1.SplitterDistance = 407;
             this.splitContainer1.TabIndex = 8;
             // 
-            // pict_TeamLogo
-            // 
-            this.pict_TeamLogo.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pict_TeamLogo.Image = global::OrientApp.Properties.Resources.Névtelen;
-            this.pict_TeamLogo.InitialImage = global::OrientApp.Properties.Resources.Névtelen;
-            this.pict_TeamLogo.Location = new System.Drawing.Point(12, 278);
-            this.pict_TeamLogo.Name = "pict_TeamLogo";
-            this.pict_TeamLogo.Size = new System.Drawing.Size(155, 155);
-            this.pict_TeamLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pict_TeamLogo.TabIndex = 16;
-            this.pict_TeamLogo.TabStop = false;
-            // 
             // gb_BoardLineInformations
             // 
             this.gb_BoardLineInformations.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -360,7 +428,7 @@
             this.gb_BoardLineInformations.Controls.Add(this.trackBar_BoardLineSecondLinePos);
             this.gb_BoardLineInformations.Location = new System.Drawing.Point(218, 453);
             this.gb_BoardLineInformations.Name = "gb_BoardLineInformations";
-            this.gb_BoardLineInformations.Size = new System.Drawing.Size(187, 221);
+            this.gb_BoardLineInformations.Size = new System.Drawing.Size(187, 225);
             this.gb_BoardLineInformations.TabIndex = 15;
             this.gb_BoardLineInformations.TabStop = false;
             this.gb_BoardLineInformations.Text = "Line Sensor Data";
@@ -428,16 +496,6 @@
             this.tb_BoardLineLineNumber.TabIndex = 24;
             this.tb_BoardLineLineNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // pic_Car2
-            // 
-            this.pic_Car2.Image = global::OrientApp.Properties.Resources.car_007_5121;
-            this.pic_Car2.Location = new System.Drawing.Point(71, 130);
-            this.pic_Car2.Name = "pic_Car2";
-            this.pic_Car2.Size = new System.Drawing.Size(51, 100);
-            this.pic_Car2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pic_Car2.TabIndex = 31;
-            this.pic_Car2.TabStop = false;
-            // 
             // trackBar_BoardLineMainLinePos
             // 
             this.trackBar_BoardLineMainLinePos.Cursor = System.Windows.Forms.Cursors.Default;
@@ -480,7 +538,7 @@
             this.gb_BoardMotorInformations.Controls.Add(this.trackBar_BoardMotorMainBatteryVoltage);
             this.gb_BoardMotorInformations.Location = new System.Drawing.Point(12, 453);
             this.gb_BoardMotorInformations.Name = "gb_BoardMotorInformations";
-            this.gb_BoardMotorInformations.Size = new System.Drawing.Size(199, 221);
+            this.gb_BoardMotorInformations.Size = new System.Drawing.Size(199, 225);
             this.gb_BoardMotorInformations.TabIndex = 14;
             this.gb_BoardMotorInformations.TabStop = false;
             this.gb_BoardMotorInformations.Text = "Motor Board Info";
@@ -628,17 +686,6 @@
             this.gb_SteeringWheel.TabIndex = 13;
             this.gb_SteeringWheel.TabStop = false;
             this.gb_SteeringWheel.Text = "Steering Wheel";
-            // 
-            // pic_SteeringWheel
-            // 
-            this.pic_SteeringWheel.Image = global::OrientApp.Properties.Resources.automotive_steering_wheel2_5121;
-            this.pic_SteeringWheel.InitialImage = global::OrientApp.Properties.Resources.automotive_steering_wheel2_5121;
-            this.pic_SteeringWheel.Location = new System.Drawing.Point(49, 69);
-            this.pic_SteeringWheel.Name = "pic_SteeringWheel";
-            this.pic_SteeringWheel.Size = new System.Drawing.Size(80, 80);
-            this.pic_SteeringWheel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pic_SteeringWheel.TabIndex = 49;
-            this.pic_SteeringWheel.TabStop = false;
             // 
             // label_deg02
             // 
@@ -833,16 +880,6 @@
             this.tb_DistanceSensorFront.Size = new System.Drawing.Size(50, 20);
             this.tb_DistanceSensorFront.TabIndex = 20;
             this.tb_DistanceSensorFront.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // pic_Car1
-            // 
-            this.pic_Car1.Image = global::OrientApp.Properties.Resources.car_007_5121;
-            this.pic_Car1.Location = new System.Drawing.Point(10, 99);
-            this.pic_Car1.Name = "pic_Car1";
-            this.pic_Car1.Size = new System.Drawing.Size(51, 100);
-            this.pic_Car1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pic_Car1.TabIndex = 12;
-            this.pic_Car1.TabStop = false;
             // 
             // gb_InertialSensor
             // 
@@ -1074,6 +1111,8 @@
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.gb_Scope);
+            this.splitContainer2.Panel2.Controls.Add(this.gb_NaviMap);
             this.splitContainer2.Panel2.Controls.Add(this.gb_MazeRunParameters);
             this.splitContainer2.Panel2.Controls.Add(this.gb_ParametersSpeedRun);
             this.splitContainer2.Size = new System.Drawing.Size(923, 681);
@@ -1094,9 +1133,9 @@
             this.gb_SerialContainer.Controls.Add(this.label_SerialComPort);
             this.gb_SerialContainer.Controls.Add(this.btn_Open);
             this.gb_SerialContainer.Controls.Add(this.cb_SerialComPort);
-            this.gb_SerialContainer.Location = new System.Drawing.Point(12, 12);
+            this.gb_SerialContainer.Location = new System.Drawing.Point(3, 12);
             this.gb_SerialContainer.Name = "gb_SerialContainer";
-            this.gb_SerialContainer.Size = new System.Drawing.Size(899, 141);
+            this.gb_SerialContainer.Size = new System.Drawing.Size(915, 141);
             this.gb_SerialContainer.TabIndex = 12;
             this.gb_SerialContainer.TabStop = false;
             this.gb_SerialContainer.Text = "Serial Informations";
@@ -1104,7 +1143,7 @@
             // label_Status
             // 
             this.label_Status.AutoSize = true;
-            this.label_Status.Location = new System.Drawing.Point(39, 80);
+            this.label_Status.Location = new System.Drawing.Point(25, 82);
             this.label_Status.Name = "label_Status";
             this.label_Status.Size = new System.Drawing.Size(40, 13);
             this.label_Status.TabIndex = 15;
@@ -1113,9 +1152,9 @@
             // tb_SerialStatusInfo
             // 
             this.tb_SerialStatusInfo.ForeColor = System.Drawing.Color.Red;
-            this.tb_SerialStatusInfo.Location = new System.Drawing.Point(109, 76);
+            this.tb_SerialStatusInfo.Location = new System.Drawing.Point(87, 79);
             this.tb_SerialStatusInfo.Name = "tb_SerialStatusInfo";
-            this.tb_SerialStatusInfo.Size = new System.Drawing.Size(87, 20);
+            this.tb_SerialStatusInfo.Size = new System.Drawing.Size(75, 20);
             this.tb_SerialStatusInfo.TabIndex = 14;
             this.tb_SerialStatusInfo.Text = "Closed";
             this.tb_SerialStatusInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1123,9 +1162,9 @@
             // 
             // tb_SerialBaude
             // 
-            this.tb_SerialBaude.Location = new System.Drawing.Point(109, 50);
+            this.tb_SerialBaude.Location = new System.Drawing.Point(87, 52);
             this.tb_SerialBaude.Name = "tb_SerialBaude";
-            this.tb_SerialBaude.Size = new System.Drawing.Size(87, 20);
+            this.tb_SerialBaude.Size = new System.Drawing.Size(75, 20);
             this.tb_SerialBaude.TabIndex = 13;
             this.tb_SerialBaude.Text = "115200";
             this.tb_SerialBaude.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1133,7 +1172,7 @@
             // label_SerialBaude
             // 
             this.label_SerialBaude.AutoSize = true;
-            this.label_SerialBaude.Location = new System.Drawing.Point(38, 53);
+            this.label_SerialBaude.Location = new System.Drawing.Point(24, 55);
             this.label_SerialBaude.Name = "label_SerialBaude";
             this.label_SerialBaude.Size = new System.Drawing.Size(41, 13);
             this.label_SerialBaude.TabIndex = 12;
@@ -1141,7 +1180,7 @@
             // 
             // btn_Close
             // 
-            this.btn_Close.Location = new System.Drawing.Point(121, 110);
+            this.btn_Close.Location = new System.Drawing.Point(87, 110);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(75, 23);
             this.btn_Close.TabIndex = 11;
@@ -1152,7 +1191,7 @@
             // label_SerialComPort
             // 
             this.label_SerialComPort.AutoSize = true;
-            this.label_SerialComPort.Location = new System.Drawing.Point(45, 27);
+            this.label_SerialComPort.Location = new System.Drawing.Point(31, 26);
             this.label_SerialComPort.Name = "label_SerialComPort";
             this.label_SerialComPort.Size = new System.Drawing.Size(34, 13);
             this.label_SerialComPort.TabIndex = 10;
@@ -1160,7 +1199,7 @@
             // 
             // btn_Open
             // 
-            this.btn_Open.Location = new System.Drawing.Point(20, 110);
+            this.btn_Open.Location = new System.Drawing.Point(6, 110);
             this.btn_Open.Name = "btn_Open";
             this.btn_Open.Size = new System.Drawing.Size(75, 23);
             this.btn_Open.TabIndex = 9;
@@ -1171,15 +1210,20 @@
             // cb_SerialComPort
             // 
             this.cb_SerialComPort.FormattingEnabled = true;
-            this.cb_SerialComPort.Location = new System.Drawing.Point(109, 24);
+            this.cb_SerialComPort.Location = new System.Drawing.Point(87, 23);
             this.cb_SerialComPort.Name = "cb_SerialComPort";
-            this.cb_SerialComPort.Size = new System.Drawing.Size(87, 21);
+            this.cb_SerialComPort.Size = new System.Drawing.Size(75, 21);
             this.cb_SerialComPort.TabIndex = 8;
             // 
             // gb_MazeRunParameters
             // 
             this.gb_MazeRunParameters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gb_MazeRunParameters.Controls.Add(this.label13);
+            this.gb_MazeRunParameters.Controls.Add(this.checkBox10);
+            this.gb_MazeRunParameters.Controls.Add(this.checkBox11);
+            this.gb_MazeRunParameters.Controls.Add(this.label12);
+            this.gb_MazeRunParameters.Controls.Add(this.checkedListBox1);
             this.gb_MazeRunParameters.Controls.Add(this.btn_MazeParametersGetParams);
             this.gb_MazeRunParameters.Controls.Add(this.label_MazeParametersGetValue);
             this.gb_MazeRunParameters.Controls.Add(this.tb_MazeParametersGetState);
@@ -1204,16 +1248,69 @@
             this.gb_MazeRunParameters.Controls.Add(this.tb_MazeParametersActualKD);
             this.gb_MazeRunParameters.Controls.Add(this.label_MazeParametersKP);
             this.gb_MazeRunParameters.Controls.Add(this.tb_MazeParametersActualKP);
-            this.gb_MazeRunParameters.Location = new System.Drawing.Point(456, -1);
+            this.gb_MazeRunParameters.Location = new System.Drawing.Point(591, -1);
             this.gb_MazeRunParameters.Name = "gb_MazeRunParameters";
-            this.gb_MazeRunParameters.Size = new System.Drawing.Size(455, 113);
+            this.gb_MazeRunParameters.Size = new System.Drawing.Size(329, 225);
             this.gb_MazeRunParameters.TabIndex = 8;
             this.gb_MazeRunParameters.TabStop = false;
             this.gb_MazeRunParameters.Text = "Maze Parameters";
             // 
+            // btn_MazeParametersGetParams
+            // 
+            this.btn_MazeParametersGetParams.Location = new System.Drawing.Point(155, 129);
+            this.btn_MazeParametersGetParams.Name = "btn_MazeParametersGetParams";
+            this.btn_MazeParametersGetParams.Size = new System.Drawing.Size(54, 22);
+            this.btn_MazeParametersGetParams.TabIndex = 76;
+            this.btn_MazeParametersGetParams.Text = "Get";
+            this.btn_MazeParametersGetParams.UseVisualStyleBackColor = true;
+            // 
+            // label_MazeParametersGetValue
+            // 
+            this.label_MazeParametersGetValue.AutoSize = true;
+            this.label_MazeParametersGetValue.Location = new System.Drawing.Point(155, 18);
+            this.label_MazeParametersGetValue.Name = "label_MazeParametersGetValue";
+            this.label_MazeParametersGetValue.Size = new System.Drawing.Size(54, 13);
+            this.label_MazeParametersGetValue.TabIndex = 75;
+            this.label_MazeParametersGetValue.Text = "Get Value";
+            // 
+            // tb_MazeParametersGetState
+            // 
+            this.tb_MazeParametersGetState.Location = new System.Drawing.Point(155, 35);
+            this.tb_MazeParametersGetState.Name = "tb_MazeParametersGetState";
+            this.tb_MazeParametersGetState.Size = new System.Drawing.Size(50, 20);
+            this.tb_MazeParametersGetState.TabIndex = 74;
+            this.tb_MazeParametersGetState.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tb_MazeParametersGetSpeed
+            // 
+            this.tb_MazeParametersGetSpeed.Location = new System.Drawing.Point(155, 103);
+            this.tb_MazeParametersGetSpeed.Name = "tb_MazeParametersGetSpeed";
+            this.tb_MazeParametersGetSpeed.ReadOnly = true;
+            this.tb_MazeParametersGetSpeed.Size = new System.Drawing.Size(50, 20);
+            this.tb_MazeParametersGetSpeed.TabIndex = 73;
+            this.tb_MazeParametersGetSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tb_MazeParametersGetKD
+            // 
+            this.tb_MazeParametersGetKD.Location = new System.Drawing.Point(155, 81);
+            this.tb_MazeParametersGetKD.Name = "tb_MazeParametersGetKD";
+            this.tb_MazeParametersGetKD.ReadOnly = true;
+            this.tb_MazeParametersGetKD.Size = new System.Drawing.Size(50, 20);
+            this.tb_MazeParametersGetKD.TabIndex = 72;
+            this.tb_MazeParametersGetKD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tb_MazeParametersGetKP
+            // 
+            this.tb_MazeParametersGetKP.Location = new System.Drawing.Point(155, 58);
+            this.tb_MazeParametersGetKP.Name = "tb_MazeParametersGetKP";
+            this.tb_MazeParametersGetKP.ReadOnly = true;
+            this.tb_MazeParametersGetKP.Size = new System.Drawing.Size(50, 20);
+            this.tb_MazeParametersGetKP.TabIndex = 71;
+            this.tb_MazeParametersGetKP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // tb_MazeParametersSetState
             // 
-            this.tb_MazeParametersSetState.Location = new System.Drawing.Point(255, 55);
+            this.tb_MazeParametersSetState.Location = new System.Drawing.Point(99, 35);
             this.tb_MazeParametersSetState.Name = "tb_MazeParametersSetState";
             this.tb_MazeParametersSetState.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetState.TabIndex = 70;
@@ -1221,9 +1318,9 @@
             // 
             // btn_MazeParametersSetStateTo
             // 
-            this.btn_MazeParametersSetStateTo.Location = new System.Drawing.Point(393, 55);
+            this.btn_MazeParametersSetStateTo.Location = new System.Drawing.Point(16, 188);
             this.btn_MazeParametersSetStateTo.Name = "btn_MazeParametersSetStateTo";
-            this.btn_MazeParametersSetStateTo.Size = new System.Drawing.Size(50, 22);
+            this.btn_MazeParametersSetStateTo.Size = new System.Drawing.Size(68, 22);
             this.btn_MazeParametersSetStateTo.TabIndex = 69;
             this.btn_MazeParametersSetStateTo.Text = "Reset";
             this.btn_MazeParametersSetStateTo.UseVisualStyleBackColor = true;
@@ -1231,24 +1328,24 @@
             // label_MazeParametersResetStateTo
             // 
             this.label_MazeParametersResetStateTo.AutoSize = true;
-            this.label_MazeParametersResetStateTo.Location = new System.Drawing.Point(384, 16);
+            this.label_MazeParametersResetStateTo.Location = new System.Drawing.Point(12, 168);
             this.label_MazeParametersResetStateTo.Name = "label_MazeParametersResetStateTo";
-            this.label_MazeParametersResetStateTo.Size = new System.Drawing.Size(70, 13);
+            this.label_MazeParametersResetStateTo.Size = new System.Drawing.Size(47, 13);
             this.label_MazeParametersResetStateTo.TabIndex = 68;
-            this.label_MazeParametersResetStateTo.Text = "Set Car State";
+            this.label_MazeParametersResetStateTo.Text = "Reset to";
             // 
             // tb_MazeParametersSetStateTo
             // 
-            this.tb_MazeParametersSetStateTo.Location = new System.Drawing.Point(393, 31);
+            this.tb_MazeParametersSetStateTo.Location = new System.Drawing.Point(61, 165);
             this.tb_MazeParametersSetStateTo.Name = "tb_MazeParametersSetStateTo";
-            this.tb_MazeParametersSetStateTo.Size = new System.Drawing.Size(50, 20);
+            this.tb_MazeParametersSetStateTo.Size = new System.Drawing.Size(23, 20);
             this.tb_MazeParametersSetStateTo.TabIndex = 67;
             this.tb_MazeParametersSetStateTo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label_MazeParametersSetValue
             // 
             this.label_MazeParametersSetValue.AutoSize = true;
-            this.label_MazeParametersSetValue.Location = new System.Drawing.Point(28, 58);
+            this.label_MazeParametersSetValue.Location = new System.Drawing.Point(96, 18);
             this.label_MazeParametersSetValue.Name = "label_MazeParametersSetValue";
             this.label_MazeParametersSetValue.Size = new System.Drawing.Size(53, 13);
             this.label_MazeParametersSetValue.TabIndex = 66;
@@ -1257,15 +1354,15 @@
             // label_MazeParametersActualValues
             // 
             this.label_MazeParametersActualValues.AutoSize = true;
-            this.label_MazeParametersActualValues.Location = new System.Drawing.Point(14, 35);
+            this.label_MazeParametersActualValues.Location = new System.Drawing.Point(51, 18);
             this.label_MazeParametersActualValues.Name = "label_MazeParametersActualValues";
-            this.label_MazeParametersActualValues.Size = new System.Drawing.Size(67, 13);
+            this.label_MazeParametersActualValues.Size = new System.Drawing.Size(37, 13);
             this.label_MazeParametersActualValues.TabIndex = 65;
-            this.label_MazeParametersActualValues.Text = "Actual Value";
+            this.label_MazeParametersActualValues.Text = "Actual";
             // 
             // tb_MazeParametersSetSpeed
             // 
-            this.tb_MazeParametersSetSpeed.Location = new System.Drawing.Point(199, 55);
+            this.tb_MazeParametersSetSpeed.Location = new System.Drawing.Point(99, 103);
             this.tb_MazeParametersSetSpeed.Name = "tb_MazeParametersSetSpeed";
             this.tb_MazeParametersSetSpeed.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetSpeed.TabIndex = 63;
@@ -1273,7 +1370,7 @@
             // 
             // tb_MazeParametersSetKD
             // 
-            this.tb_MazeParametersSetKD.Location = new System.Drawing.Point(143, 55);
+            this.tb_MazeParametersSetKD.Location = new System.Drawing.Point(99, 80);
             this.tb_MazeParametersSetKD.Name = "tb_MazeParametersSetKD";
             this.tb_MazeParametersSetKD.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetKD.TabIndex = 62;
@@ -1281,7 +1378,7 @@
             // 
             // tb_MazeParametersSetKP
             // 
-            this.tb_MazeParametersSetKP.Location = new System.Drawing.Point(87, 55);
+            this.tb_MazeParametersSetKP.Location = new System.Drawing.Point(99, 58);
             this.tb_MazeParametersSetKP.Name = "tb_MazeParametersSetKP";
             this.tb_MazeParametersSetKP.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetKP.TabIndex = 61;
@@ -1290,7 +1387,7 @@
             // label_MazeParametersActualState
             // 
             this.label_MazeParametersActualState.AutoSize = true;
-            this.label_MazeParametersActualState.Location = new System.Drawing.Point(264, 16);
+            this.label_MazeParametersActualState.Location = new System.Drawing.Point(8, 38);
             this.label_MazeParametersActualState.Name = "label_MazeParametersActualState";
             this.label_MazeParametersActualState.Size = new System.Drawing.Size(32, 13);
             this.label_MazeParametersActualState.TabIndex = 60;
@@ -1298,7 +1395,7 @@
             // 
             // tb_MazeParametersActualState
             // 
-            this.tb_MazeParametersActualState.Location = new System.Drawing.Point(255, 32);
+            this.tb_MazeParametersActualState.Location = new System.Drawing.Point(43, 35);
             this.tb_MazeParametersActualState.Name = "tb_MazeParametersActualState";
             this.tb_MazeParametersActualState.ReadOnly = true;
             this.tb_MazeParametersActualState.Size = new System.Drawing.Size(50, 20);
@@ -1307,9 +1404,9 @@
             // 
             // btn_MazeParametersSendParams
             // 
-            this.btn_MazeParametersSendParams.Location = new System.Drawing.Point(314, 55);
+            this.btn_MazeParametersSendParams.Location = new System.Drawing.Point(99, 129);
             this.btn_MazeParametersSendParams.Name = "btn_MazeParametersSendParams";
-            this.btn_MazeParametersSendParams.Size = new System.Drawing.Size(62, 22);
+            this.btn_MazeParametersSendParams.Size = new System.Drawing.Size(50, 22);
             this.btn_MazeParametersSendParams.TabIndex = 58;
             this.btn_MazeParametersSendParams.Text = "Send";
             this.btn_MazeParametersSendParams.UseVisualStyleBackColor = true;
@@ -1317,7 +1414,7 @@
             // label_MazeParametersSpeed
             // 
             this.label_MazeParametersSpeed.AutoSize = true;
-            this.label_MazeParametersSpeed.Location = new System.Drawing.Point(205, 16);
+            this.label_MazeParametersSpeed.Location = new System.Drawing.Point(2, 106);
             this.label_MazeParametersSpeed.Name = "label_MazeParametersSpeed";
             this.label_MazeParametersSpeed.Size = new System.Drawing.Size(38, 13);
             this.label_MazeParametersSpeed.TabIndex = 55;
@@ -1325,7 +1422,7 @@
             // 
             // tb_MazeParametersActualSpeed
             // 
-            this.tb_MazeParametersActualSpeed.Location = new System.Drawing.Point(199, 32);
+            this.tb_MazeParametersActualSpeed.Location = new System.Drawing.Point(43, 103);
             this.tb_MazeParametersActualSpeed.Name = "tb_MazeParametersActualSpeed";
             this.tb_MazeParametersActualSpeed.ReadOnly = true;
             this.tb_MazeParametersActualSpeed.Size = new System.Drawing.Size(50, 20);
@@ -1335,7 +1432,7 @@
             // label_MazeParametersKD
             // 
             this.label_MazeParametersKD.AutoSize = true;
-            this.label_MazeParametersKD.Location = new System.Drawing.Point(151, 16);
+            this.label_MazeParametersKD.Location = new System.Drawing.Point(12, 83);
             this.label_MazeParametersKD.Name = "label_MazeParametersKD";
             this.label_MazeParametersKD.Size = new System.Drawing.Size(28, 13);
             this.label_MazeParametersKD.TabIndex = 53;
@@ -1343,7 +1440,7 @@
             // 
             // tb_MazeParametersActualKD
             // 
-            this.tb_MazeParametersActualKD.Location = new System.Drawing.Point(143, 32);
+            this.tb_MazeParametersActualKD.Location = new System.Drawing.Point(43, 80);
             this.tb_MazeParametersActualKD.Name = "tb_MazeParametersActualKD";
             this.tb_MazeParametersActualKD.ReadOnly = true;
             this.tb_MazeParametersActualKD.Size = new System.Drawing.Size(50, 20);
@@ -1353,7 +1450,7 @@
             // label_MazeParametersKP
             // 
             this.label_MazeParametersKP.AutoSize = true;
-            this.label_MazeParametersKP.Location = new System.Drawing.Point(97, 16);
+            this.label_MazeParametersKP.Location = new System.Drawing.Point(13, 61);
             this.label_MazeParametersKP.Name = "label_MazeParametersKP";
             this.label_MazeParametersKP.Size = new System.Drawing.Size(27, 13);
             this.label_MazeParametersKP.TabIndex = 51;
@@ -1361,65 +1458,469 @@
             // 
             // tb_MazeParametersActualKP
             // 
-            this.tb_MazeParametersActualKP.Location = new System.Drawing.Point(87, 32);
+            this.tb_MazeParametersActualKP.Location = new System.Drawing.Point(43, 58);
             this.tb_MazeParametersActualKP.Name = "tb_MazeParametersActualKP";
             this.tb_MazeParametersActualKP.ReadOnly = true;
             this.tb_MazeParametersActualKP.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersActualKP.TabIndex = 50;
             this.tb_MazeParametersActualKP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tb_MazeParametersGetSpeed
+            // pict_TeamLogo
             // 
-            this.tb_MazeParametersGetSpeed.Location = new System.Drawing.Point(199, 81);
-            this.tb_MazeParametersGetSpeed.Name = "tb_MazeParametersGetSpeed";
-            this.tb_MazeParametersGetSpeed.ReadOnly = true;
-            this.tb_MazeParametersGetSpeed.Size = new System.Drawing.Size(50, 20);
-            this.tb_MazeParametersGetSpeed.TabIndex = 73;
-            this.tb_MazeParametersGetSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pict_TeamLogo.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pict_TeamLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pict_TeamLogo.Image = global::OrientApp.Properties.Resources.Névtelen;
+            this.pict_TeamLogo.InitialImage = global::OrientApp.Properties.Resources.Névtelen;
+            this.pict_TeamLogo.Location = new System.Drawing.Point(45, 288);
+            this.pict_TeamLogo.Name = "pict_TeamLogo";
+            this.pict_TeamLogo.Size = new System.Drawing.Size(155, 155);
+            this.pict_TeamLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pict_TeamLogo.TabIndex = 16;
+            this.pict_TeamLogo.TabStop = false;
+            this.pict_TeamLogo.Click += new System.EventHandler(this.pict_TeamLogo_Click);
             // 
-            // tb_MazeParametersGetKD
+            // pic_Car2
             // 
-            this.tb_MazeParametersGetKD.Location = new System.Drawing.Point(143, 81);
-            this.tb_MazeParametersGetKD.Name = "tb_MazeParametersGetKD";
-            this.tb_MazeParametersGetKD.ReadOnly = true;
-            this.tb_MazeParametersGetKD.Size = new System.Drawing.Size(50, 20);
-            this.tb_MazeParametersGetKD.TabIndex = 72;
-            this.tb_MazeParametersGetKD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pic_Car2.Image = global::OrientApp.Properties.Resources.car_007_5121;
+            this.pic_Car2.Location = new System.Drawing.Point(71, 130);
+            this.pic_Car2.Name = "pic_Car2";
+            this.pic_Car2.Size = new System.Drawing.Size(51, 100);
+            this.pic_Car2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pic_Car2.TabIndex = 31;
+            this.pic_Car2.TabStop = false;
             // 
-            // tb_MazeParametersGetKP
+            // pic_SteeringWheel
             // 
-            this.tb_MazeParametersGetKP.Location = new System.Drawing.Point(87, 81);
-            this.tb_MazeParametersGetKP.Name = "tb_MazeParametersGetKP";
-            this.tb_MazeParametersGetKP.ReadOnly = true;
-            this.tb_MazeParametersGetKP.Size = new System.Drawing.Size(50, 20);
-            this.tb_MazeParametersGetKP.TabIndex = 71;
-            this.tb_MazeParametersGetKP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pic_SteeringWheel.Image = global::OrientApp.Properties.Resources.automotive_steering_wheel2_5121;
+            this.pic_SteeringWheel.InitialImage = global::OrientApp.Properties.Resources.automotive_steering_wheel2_5121;
+            this.pic_SteeringWheel.Location = new System.Drawing.Point(49, 69);
+            this.pic_SteeringWheel.Name = "pic_SteeringWheel";
+            this.pic_SteeringWheel.Size = new System.Drawing.Size(80, 80);
+            this.pic_SteeringWheel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pic_SteeringWheel.TabIndex = 49;
+            this.pic_SteeringWheel.TabStop = false;
             // 
-            // tb_MazeParametersGetState
+            // pic_Car1
             // 
-            this.tb_MazeParametersGetState.Location = new System.Drawing.Point(255, 81);
-            this.tb_MazeParametersGetState.Name = "tb_MazeParametersGetState";
-            this.tb_MazeParametersGetState.Size = new System.Drawing.Size(50, 20);
-            this.tb_MazeParametersGetState.TabIndex = 74;
-            this.tb_MazeParametersGetState.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pic_Car1.Image = global::OrientApp.Properties.Resources.car_007_5121;
+            this.pic_Car1.Location = new System.Drawing.Point(10, 99);
+            this.pic_Car1.Name = "pic_Car1";
+            this.pic_Car1.Size = new System.Drawing.Size(51, 100);
+            this.pic_Car1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pic_Car1.TabIndex = 12;
+            this.pic_Car1.TabStop = false;
             // 
-            // label_MazeParametersGetValue
+            // pictureBox1
             // 
-            this.label_MazeParametersGetValue.AutoSize = true;
-            this.label_MazeParametersGetValue.Location = new System.Drawing.Point(28, 84);
-            this.label_MazeParametersGetValue.Name = "label_MazeParametersGetValue";
-            this.label_MazeParametersGetValue.Size = new System.Drawing.Size(54, 13);
-            this.label_MazeParametersGetValue.TabIndex = 75;
-            this.label_MazeParametersGetValue.Text = "Get Value";
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::OrientApp.Properties.Resources.SpeedRunMap_mini;
+            this.pictureBox1.Location = new System.Drawing.Point(215, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(249, 284);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 50;
+            this.pictureBox1.TabStop = false;
             // 
-            // btn_MazeParametersGetParams
+            // label1
             // 
-            this.btn_MazeParametersGetParams.Location = new System.Drawing.Point(314, 81);
-            this.btn_MazeParametersGetParams.Name = "btn_MazeParametersGetParams";
-            this.btn_MazeParametersGetParams.Size = new System.Drawing.Size(62, 22);
-            this.btn_MazeParametersGetParams.TabIndex = 76;
-            this.btn_MazeParametersGetParams.Text = "Get";
-            this.btn_MazeParametersGetParams.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(50, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Actual";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(97, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Set Value";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(152, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 53;
+            this.label3.Text = "Get Value";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(99, 34);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(50, 20);
+            this.textBox1.TabIndex = 54;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(43, 34);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(50, 20);
+            this.textBox2.TabIndex = 55;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(43, 56);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(50, 20);
+            this.textBox3.TabIndex = 58;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(99, 56);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(50, 20);
+            this.textBox4.TabIndex = 57;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(155, 56);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(50, 20);
+            this.textBox6.TabIndex = 56;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(43, 78);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(50, 20);
+            this.textBox7.TabIndex = 61;
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(99, 78);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(50, 20);
+            this.textBox8.TabIndex = 60;
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(155, 78);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(50, 20);
+            this.textBox9.TabIndex = 59;
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(43, 100);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(50, 20);
+            this.textBox10.TabIndex = 64;
+            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(99, 100);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(50, 20);
+            this.textBox11.TabIndex = 63;
+            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(155, 100);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
+            this.textBox12.Size = new System.Drawing.Size(50, 20);
+            this.textBox12.TabIndex = 62;
+            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(44, 123);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
+            this.textBox13.Size = new System.Drawing.Size(50, 20);
+            this.textBox13.TabIndex = 67;
+            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(99, 123);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(50, 20);
+            this.textBox14.TabIndex = 66;
+            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(155, 123);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
+            this.textBox15.Size = new System.Drawing.Size(50, 20);
+            this.textBox15.TabIndex = 65;
+            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(24, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(14, 13);
+            this.label4.TabIndex = 68;
+            this.label4.Text = "P";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 81);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 13);
+            this.label5.TabIndex = 69;
+            this.label5.Text = "K_P";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 103);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 13);
+            this.label6.TabIndex = 70;
+            this.label6.Text = "K_D";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 126);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 71;
+            this.label7.Text = "Speed";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(100, 146);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 23);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "Set";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(155, 146);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 23);
+            this.button2.TabIndex = 73;
+            this.button2.Text = "Get";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(6, 218);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(81, 17);
+            this.checkBox1.TabIndex = 74;
+            this.checkBox1.Text = "Parade Lap";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(6, 233);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(78, 17);
+            this.checkBox2.TabIndex = 75;
+            this.checkBox2.Text = "Overtaking";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(6, 263);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(53, 17);
+            this.checkBox3.TabIndex = 77;
+            this.checkBox3.Text = "Lap 2";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(6, 248);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(53, 17);
+            this.checkBox4.TabIndex = 76;
+            this.checkBox4.Text = "Lap 1";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(6, 278);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(53, 17);
+            this.checkBox5.TabIndex = 78;
+            this.checkBox5.Text = "Lap 3";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(6, 176);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(98, 17);
+            this.checkBox6.TabIndex = 79;
+            this.checkBox6.Text = "Try to overtake";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label9.Location = new System.Drawing.Point(3, 202);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(102, 13);
+            this.label9.TabIndex = 80;
+            this.label9.Text = "Main State Machine";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.Location = new System.Drawing.Point(3, 159);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 13);
+            this.label10.TabIndex = 81;
+            this.label10.Text = "Settings";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(183, 242);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(21, 20);
+            this.textBox16.TabIndex = 82;
+            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(121, 267);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(83, 23);
+            this.button3.TabIndex = 83;
+            this.button3.Text = "Soft Reset";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(127, 198);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(77, 23);
+            this.button4.TabIndex = 84;
+            this.button4.Text = "Hard Reset";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label11.Location = new System.Drawing.Point(132, 246);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 13);
+            this.label11.TabIndex = 85;
+            this.label11.Text = "Reset to";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "1 st",
+            "2 nd",
+            "3 rd",
+            "4 th",
+            "5 th",
+            "6 th",
+            "7 th",
+            "8 th",
+            "9 th",
+            "10 th",
+            "11 th",
+            "12 th"});
+            this.checkedListBox1.Location = new System.Drawing.Point(239, 35);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(54, 184);
+            this.checkedListBox1.TabIndex = 9;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label12.Location = new System.Drawing.Point(222, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(105, 16);
+            this.label12.TabIndex = 86;
+            this.label12.Text = "Maze Segments";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label13.Location = new System.Drawing.Point(107, 165);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(102, 13);
+            this.label13.TabIndex = 92;
+            this.label13.Text = "Main State Machine";
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(110, 196);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(74, 17);
+            this.checkBox10.TabIndex = 88;
+            this.checkBox10.Text = "Inclination";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Location = new System.Drawing.Point(110, 181);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(73, 17);
+            this.checkBox11.TabIndex = 87;
+            this.checkBox11.Text = "Discovery";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            // 
+            // gb_NaviMap
+            // 
+            this.gb_NaviMap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.gb_NaviMap.Location = new System.Drawing.Point(3, 222);
+            this.gb_NaviMap.Name = "gb_NaviMap";
+            this.gb_NaviMap.Size = new System.Drawing.Size(450, 296);
+            this.gb_NaviMap.TabIndex = 9;
+            this.gb_NaviMap.TabStop = false;
+            this.gb_NaviMap.Text = "Navigation Map";
+            // 
+            // gb_Scope
+            // 
+            this.gb_Scope.Location = new System.Drawing.Point(3, 0);
+            this.gb_Scope.Name = "gb_Scope";
+            this.gb_Scope.Size = new System.Drawing.Size(584, 224);
+            this.gb_Scope.TabIndex = 10;
+            this.gb_Scope.TabStop = false;
+            this.gb_Scope.Text = "Scope";
             // 
             // Form1
             // 
@@ -1432,14 +1933,11 @@
             this.gb_ParametersSpeedRun.ResumeLayout(false);
             this.gb_ParametersSpeedRun.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pict_TeamLogo)).EndInit();
             this.gb_BoardLineInformations.ResumeLayout(false);
             this.gb_BoardLineInformations.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Car2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_BoardLineMainLinePos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_BoardLineSecondLinePos)).EndInit();
             this.gb_BoardMotorInformations.ResumeLayout(false);
@@ -1447,12 +1945,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_BoardMotorMainBatteryVoltage)).EndInit();
             this.gb_SteeringWheel.ResumeLayout(false);
             this.gb_SteeringWheel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_SteeringWheel)).EndInit();
             this.bg_Encoder.ResumeLayout(false);
             this.bg_Encoder.PerformLayout();
             this.gb_DistanceSensors.ResumeLayout(false);
             this.gb_DistanceSensors.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Car1)).EndInit();
             this.gb_InertialSensor.ResumeLayout(false);
             this.gb_InertialSensor.PerformLayout();
             this.gb_NavigationData.ResumeLayout(false);
@@ -1465,6 +1961,11 @@
             this.gb_SerialContainer.PerformLayout();
             this.gb_MazeRunParameters.ResumeLayout(false);
             this.gb_MazeRunParameters.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pict_TeamLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Car2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SteeringWheel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Car1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1592,6 +2093,49 @@
         private System.Windows.Forms.Button btn_MazeParametersGetParams;
         private System.Windows.Forms.Label label_MazeParametersGetValue;
         private System.Windows.Forms.TextBox tb_MazeParametersGetState;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.GroupBox gb_NaviMap;
+        private System.Windows.Forms.GroupBox gb_Scope;
     }
 }
 

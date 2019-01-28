@@ -225,5 +225,10 @@ namespace OrientApp
                 tb_SerialStatusInfo.ForeColor = Color.Red;
             }
         }
+
+        private void pict_TeamLogo_Click(object sender, EventArgs e)
+        {
+            // TODO Stop car.
+        }
     }
 }
