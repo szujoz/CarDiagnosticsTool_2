@@ -39,7 +39,7 @@ namespace OrientApp
         public double MazeGetKp { get; set; }
         public double MazeGetKd { get; set; }
         public int MazeGetSpeed { get; set; }
-        public int MazeSegments { get; set; }
+        public Int64 MazeSegments { get; set; }
         public int MazeActState { get; set; }
         public double MazeActKp { get; set; }
         public double MazeActKd { get; set; }
@@ -84,95 +84,95 @@ namespace OrientApp
 
         public void ProcessBytes (byte[] bytes)
         {
-            foreach (var msg in TraceInfo.MsgOrder)
+            foreach (var msg in TraceInfo.RecMsgOrder)
             {
                 if (msg.Type == TraceData.E_MsgType.eFloat)
                 {
-                    switch (msg.Name)
+                    switch (msg.RxName)
                     {
-                        case TraceData.E_MsgName.eNaviN:
+                        case TraceData.E_RecMsgName.eNaviN:
                             NaviState.Poistion.Y = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eNaviE:
+                        case TraceData.E_RecMsgName.eNaviE:
                             NaviState.Poistion.X = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eNaviPsi:
+                        case TraceData.E_RecMsgName.eNaviPsi:
                             NaviState.Orientation = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eEncoderVelocity:
+                        case TraceData.E_RecMsgName.eEncoderVelocity:
                             EncoderVelocity = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eInertAccelerationX:
+                        case TraceData.E_RecMsgName.eInertAccelerationX:
                             InertAccel.X = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eInertAccelerationY:
+                        case TraceData.E_RecMsgName.eInertAccelerationY:
                             InertAccel.Y = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eInertAccelerationZ:
+                        case TraceData.E_RecMsgName.eInertAccelerationZ:
                             InertAccel.Z = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eInertAngularVelocityX:
+                        case TraceData.E_RecMsgName.eInertAngularVelocityX:
                             InertAngularVelocity.X = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eInertAngularVelocityY:
+                        case TraceData.E_RecMsgName.eInertAngularVelocityY:
                             InertAngularVelocity.Y = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eInertAngularVelocityZ:
+                        case TraceData.E_RecMsgName.eInertAngularVelocityZ:
                             InertAngularVelocity.Z = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eSteeringWheelAngle:
+                        case TraceData.E_RecMsgName.eSteeringWheelAngle:
                             ServoAngle = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eServoAngle:
+                        case TraceData.E_RecMsgName.eServoAngle:
                             ServoAngle = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
 
-                        case TraceData.E_MsgName.eMotorMainBatVolt:
+                        case TraceData.E_RecMsgName.eMotorMainBatVolt:
                             MotorMainBatVolt = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eMotorSecBatVolt:
+                        case TraceData.E_RecMsgName.eMotorSecBatVolt:
                             MotorSecBatVolt = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eMotorCurrent:
+                        case TraceData.E_RecMsgName.eMotorCurrent:
                             MotorCurrent = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
 
-                        case TraceData.E_MsgName.eLineMainLinePos:
+                        case TraceData.E_RecMsgName.eLineMainLinePos:
                             LineMainLinePos = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eLineSecLinePos:
+                        case TraceData.E_RecMsgName.eLineSecLinePos:
                             LineSecLinePos = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
 
-                        case TraceData.E_MsgName.eMazeGetKp:
+                        case TraceData.E_RecMsgName.eMazeGetKp:
                             MazeGetKp = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eMazeGetKd:
+                        case TraceData.E_RecMsgName.eMazeGetKd:
                             MazeGetKd = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eMazeActKp:
+                        case TraceData.E_RecMsgName.eMazeActKp:
                             MazeActKp = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eMazeActKd:
+                        case TraceData.E_RecMsgName.eMazeActKd:
                             MazeActKd = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
 
-                        case TraceData.E_MsgName.eSRunActP:
+                        case TraceData.E_RecMsgName.eSRunActP:
                             SRunActP = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eSRunActKp:
+                        case TraceData.E_RecMsgName.eSRunActKp:
                             SRunActKp = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eSRunActKd:
+                        case TraceData.E_RecMsgName.eSRunActKd:
                             SRunActKd = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eSRunGetP:
+                        case TraceData.E_RecMsgName.eSRunGetP:
                             SRunGetP = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eSRunGetKp:
+                        case TraceData.E_RecMsgName.eSRunGetKp:
                             SRunGetKp = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
-                        case TraceData.E_MsgName.eSRunGetKd:
+                        case TraceData.E_RecMsgName.eSRunGetKd:
                             SRunGetKd = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
 
@@ -183,61 +183,61 @@ namespace OrientApp
                 }
                 else
                 {
-                    switch (msg.Name)
+                    switch (msg.RxName)
                     {
-                        case TraceData.E_MsgName.eDistTof1:
+                        case TraceData.E_RecMsgName.eDistTof1:
                             DistTof1 = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
-                        case TraceData.E_MsgName.eDistTof2:
+                        case TraceData.E_RecMsgName.eDistTof2:
                             DistTof2 = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
-                        case TraceData.E_MsgName.eDistTof3:
+                        case TraceData.E_RecMsgName.eDistTof3:
                             DistTof3 = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
-                        case TraceData.E_MsgName.eDistSharp1:
+                        case TraceData.E_RecMsgName.eDistSharp1:
                             DistSharp1 = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
 
-                        case TraceData.E_MsgName.eMotorSysCurrent:
+                        case TraceData.E_RecMsgName.eMotorSysCurrent:
                             MotorSysCurrent = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
-                        case TraceData.E_MsgName.eMotorServoCurrent:
+                        case TraceData.E_RecMsgName.eMotorServoCurrent:
                             MotorServoCurrent = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
 
-                        case TraceData.E_MsgName.eLineNumOfLine:
+                        case TraceData.E_RecMsgName.eLineNumOfLine:
                             LineNumberOfLines = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
 
-                        case TraceData.E_MsgName.eMazeMainSM:
+                        case TraceData.E_RecMsgName.eMazeMainSM:
                             MazeMainSM = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
-                        case TraceData.E_MsgName.eMazeGetSpeed:
+                        case TraceData.E_RecMsgName.eMazeGetSpeed:
                             MazeGetSpeed = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
-                        case TraceData.E_MsgName.eMazeSegments:
-                            MazeSegments = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
+                        case TraceData.E_RecMsgName.eMazeSegments:
+                            MazeSegments = Converter.UnwrapLong(bytes, msg.Offset, msg.Lenght);
                             break;
-                        case TraceData.E_MsgName.eMazeActState:
+                        case TraceData.E_RecMsgName.eMazeActState:
                             MazeActState = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
-                        case TraceData.E_MsgName.eMazeActSpeed:
+                        case TraceData.E_RecMsgName.eMazeActSpeed:
                             MazeActSpeed = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
-                        case TraceData.E_MsgName.eMazeInclinSegment:
+                        case TraceData.E_RecMsgName.eMazeInclinSegment:
                             MazeInclinSegment = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
 
-                        case TraceData.E_MsgName.eSRunMainSM:
+                        case TraceData.E_RecMsgName.eSRunMainSM:
                             SRunMainSM = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
-                        case TraceData.E_MsgName.eSRunActState:
+                        case TraceData.E_RecMsgName.eSRunActState:
                             SRunActState = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
-                        case TraceData.E_MsgName.eSRunActSpeed:
+                        case TraceData.E_RecMsgName.eSRunActSpeed:
                             SRunActSpeed = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
-                        case TraceData.E_MsgName.eSRunGetSpeed:
+                        case TraceData.E_RecMsgName.eSRunGetSpeed:
                             SRunGetSpeed = Converter.UnwrapInt(bytes, msg.Offset, msg.Lenght);
                             break;
                         default:

@@ -8,7 +8,7 @@ namespace OrientApp
 {
     public class TraceData
     {
-        public enum E_MsgName
+        public enum E_RecMsgName
         {
             eNaviN = 0,
             eNaviE,
@@ -61,6 +61,30 @@ namespace OrientApp
 
         };
 
+        public enum E_TxMsgName
+        {
+            eStopCar = 0,
+
+            eMazeMainSMReset,
+            eMazeMainSMResetTo,
+            eMazeGetState,
+            eMazeSetState,
+            eMazeSetKp,
+            eMazeSetKd,
+            eMazeSetSpeed,
+
+            eSRunTryOvertake,
+            eSRunHardReset,
+            eSRunSoftReset,
+            eSRunSoftResetTo,
+            eSRunGetState,
+            eSRunSetState,
+            eSRunSetP,
+            eSRunSetKp,
+            eSRunSetKd,
+            eSRunSetSpeed
+        }
+
         public enum E_MsgType
         {
             eFloat = 0,
@@ -70,12 +94,22 @@ namespace OrientApp
         public int Offset { get; set; }
         public int Lenght { get; set; }
         public int Decimals { get; set; }
-        public E_MsgName Name { get; set; }
+        public E_RecMsgName RxName { get; set; }
+        public E_TxMsgName TxName { get; set; }
         public E_MsgType Type { get; set; }
 
-        public TraceData (E_MsgName name, E_MsgType type, int ofs, int len, int dec = 0)
+        public TraceData (E_RecMsgName name, E_MsgType type, int ofs, int len, int dec = 0)
         {
-            Name = name;
+            RxName = name;
+            Type = type;
+            Offset = ofs;
+            Lenght = len;
+            Decimals = dec;
+        }
+
+        public TraceData (E_TxMsgName name, E_MsgType type, int ofs, int len, int dec = 0)
+        {
+            TxName = name;
             Type = type;
             Offset = ofs;
             Lenght = len;

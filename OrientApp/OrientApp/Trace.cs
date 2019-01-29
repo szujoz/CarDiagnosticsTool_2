@@ -11,9 +11,9 @@ namespace OrientApp
         // Singleton
         private static Trace Instance;
 
-        public List<TraceData> MsgOrder { get; set; }
+        public List<TraceData> RecMsgOrder { get; set; }
 
-        private int index;
+        public List<TraceData> TxMsgOrder { get; set; }
 
         private int msgLenght = 120;
 
@@ -33,64 +33,87 @@ namespace OrientApp
 
         private Trace ()
         {
-            MsgOrder = new List<TraceData>(msgLenght);
+            RecMsgOrder = new List<TraceData>(msgLenght);
+            TxMsgOrder = new List<TraceData>(msgLenght);
 
-            UpdateMessageOrder();
-
-            // Header (2) + Size (3)
-            index = 5;
+            UpdateRecMessageOrder();
+            UpdateTxMessageOrder();
         }
 
-        private void UpdateMessageOrder()
+        private void UpdateRecMessageOrder()
         {
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eNaviN, TraceData.E_MsgType.eFloat, 5, 5, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eNaviE, TraceData.E_MsgType.eFloat, 10, 5, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eNaviPsi, TraceData.E_MsgType.eFloat, 15, 5, 4));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eEncoderVelocity, TraceData.E_MsgType.eFloat, 20, 4, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eDistTof1, TraceData.E_MsgType.eInt, 24, 4));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eDistTof2, TraceData.E_MsgType.eInt, 28, 4));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eDistTof3, TraceData.E_MsgType.eInt, 32, 4));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eDistSharp1, TraceData.E_MsgType.eInt, 36, 4));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eInertAccelerationX, TraceData.E_MsgType.eFloat, 40, 6, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eInertAccelerationY, TraceData.E_MsgType.eFloat, 46, 6, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eInertAccelerationZ, TraceData.E_MsgType.eFloat, 52, 6, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eInertAngularVelocityX, TraceData.E_MsgType.eFloat, 58, 6, 4));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eInertAngularVelocityY, TraceData.E_MsgType.eFloat, 64, 6, 4));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eInertAngularVelocityZ, TraceData.E_MsgType.eFloat, 70, 6, 4));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eSteeringWheelAngle, TraceData.E_MsgType.eFloat, 76, 5, 4));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eServoAngle, TraceData.E_MsgType.eFloat, 81, 5, 4));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eNaviN, TraceData.E_MsgType.eFloat, 5, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eNaviE, TraceData.E_MsgType.eFloat, 10, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eNaviPsi, TraceData.E_MsgType.eFloat, 15, 5, 4));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eEncoderVelocity, TraceData.E_MsgType.eFloat, 20, 4, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eDistTof1, TraceData.E_MsgType.eInt, 24, 4));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eDistTof2, TraceData.E_MsgType.eInt, 28, 4));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eDistTof3, TraceData.E_MsgType.eInt, 32, 4));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eDistSharp1, TraceData.E_MsgType.eInt, 36, 4));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eInertAccelerationX, TraceData.E_MsgType.eFloat, 40, 6, 3));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eInertAccelerationY, TraceData.E_MsgType.eFloat, 46, 6, 3));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eInertAccelerationZ, TraceData.E_MsgType.eFloat, 52, 6, 3));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eInertAngularVelocityX, TraceData.E_MsgType.eFloat, 58, 6, 4));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eInertAngularVelocityY, TraceData.E_MsgType.eFloat, 64, 6, 4));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eInertAngularVelocityZ, TraceData.E_MsgType.eFloat, 70, 6, 4));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSteeringWheelAngle, TraceData.E_MsgType.eFloat, 76, 5, 4));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eServoAngle, TraceData.E_MsgType.eFloat, 81, 5, 4));
 
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMotorMainBatVolt, TraceData.E_MsgType.eFloat, 86, 5, 3));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMotorSecBatVolt, TraceData.E_MsgType.eFloat, 91, 5, 3));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMotorCurrent, TraceData.E_MsgType.eFloat, 96, 9, 3));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMotorSysCurrent, TraceData.E_MsgType.eInt, 105, 4));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMotorServoCurrent, TraceData.E_MsgType.eInt, 109, 4));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMotorMainBatVolt, TraceData.E_MsgType.eFloat, 86, 5, 3));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMotorSecBatVolt, TraceData.E_MsgType.eFloat, 91, 5, 3));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMotorCurrent, TraceData.E_MsgType.eFloat, 96, 9, 3));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMotorSysCurrent, TraceData.E_MsgType.eInt, 105, 4));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMotorServoCurrent, TraceData.E_MsgType.eInt, 109, 4));
 
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eLineNumOfLine, TraceData.E_MsgType.eInt, 113, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eLineMainLinePos, TraceData.E_MsgType.eFloat, 115, 6, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eLineSecLinePos, TraceData.E_MsgType.eFloat, 121, 6, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eLineNumOfLine, TraceData.E_MsgType.eInt, 113, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eLineMainLinePos, TraceData.E_MsgType.eFloat, 115, 6, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eLineSecLinePos, TraceData.E_MsgType.eFloat, 121, 6, 2));
 
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMazeMainSM, TraceData.E_MsgType.eInt, 127, 1));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMazeGetKp, TraceData.E_MsgType.eFloat, 128, 5, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMazeGetKd, TraceData.E_MsgType.eFloat, 133, 5, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMazeGetSpeed, TraceData.E_MsgType.eInt, 138, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMazeSegments, TraceData.E_MsgType.eInt, 140, 12));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMazeActState, TraceData.E_MsgType.eInt, 152, 1));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMazeActKp, TraceData.E_MsgType.eFloat, 153, 5, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMazeActKd, TraceData.E_MsgType.eFloat, 158, 5, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMazeActSpeed, TraceData.E_MsgType.eInt, 163, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eMazeInclinSegment, TraceData.E_MsgType.eInt, 165, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMazeMainSM, TraceData.E_MsgType.eInt, 127, 1));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMazeGetKp, TraceData.E_MsgType.eFloat, 128, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMazeGetKd, TraceData.E_MsgType.eFloat, 133, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMazeGetSpeed, TraceData.E_MsgType.eInt, 138, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMazeSegments, TraceData.E_MsgType.eInt, 140, 12));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMazeActState, TraceData.E_MsgType.eInt, 152, 1));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMazeActKp, TraceData.E_MsgType.eFloat, 153, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMazeActKd, TraceData.E_MsgType.eFloat, 158, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMazeActSpeed, TraceData.E_MsgType.eInt, 163, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eMazeInclinSegment, TraceData.E_MsgType.eInt, 165, 2));
 
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eSRunMainSM, TraceData.E_MsgType.eInt, 167, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eSRunActState, TraceData.E_MsgType.eInt, 169, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eSRunActP, TraceData.E_MsgType.eFloat, 171, 6, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eSRunActKp, TraceData.E_MsgType.eFloat, 176, 5, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eSRunActKd, TraceData.E_MsgType.eFloat, 181, 5, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eSRunActSpeed, TraceData.E_MsgType.eInt, 186, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eSRunGetP, TraceData.E_MsgType.eFloat, 188, 6, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eSRunGetKp, TraceData.E_MsgType.eFloat, 194, 5, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eSRunGetKd, TraceData.E_MsgType.eFloat, 199, 5, 2));
-            MsgOrder.Add(new TraceData(TraceData.E_MsgName.eSRunGetSpeed, TraceData.E_MsgType.eInt, 204, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunMainSM, TraceData.E_MsgType.eInt, 167, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActState, TraceData.E_MsgType.eInt, 169, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActP, TraceData.E_MsgType.eFloat, 171, 6, 3));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActKp, TraceData.E_MsgType.eFloat, 176, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActKd, TraceData.E_MsgType.eFloat, 181, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActSpeed, TraceData.E_MsgType.eInt, 186, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunGetP, TraceData.E_MsgType.eFloat, 188, 6, 3));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunGetKp, TraceData.E_MsgType.eFloat, 194, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunGetKd, TraceData.E_MsgType.eFloat, 199, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunGetSpeed, TraceData.E_MsgType.eInt, 204, 2));
+        }
+
+        private void UpdateTxMessageOrder ()
+        {
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eStopCar, TraceData.E_MsgType.eInt, 5, 1));
+
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eMazeMainSMReset, TraceData.E_MsgType.eInt, 6, 1));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eMazeMainSMResetTo, TraceData.E_MsgType.eInt, 7, 1));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eMazeGetState, TraceData.E_MsgType.eInt, 8, 1));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eMazeSetState, TraceData.E_MsgType.eInt, 9, 1));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eMazeSetKp, TraceData.E_MsgType.eFloat, 10, 5, 2));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eMazeSetKd, TraceData.E_MsgType.eFloat, 15, 5, 2));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eMazeSetSpeed, TraceData.E_MsgType.eInt, 20, 2));
+
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunTryOvertake, TraceData.E_MsgType.eInt, 22, 1));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunHardReset, TraceData.E_MsgType.eInt, 23, 1));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSoftReset, TraceData.E_MsgType.eInt, 24, 1));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSoftResetTo, TraceData.E_MsgType.eInt, 25, 2));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunGetState, TraceData.E_MsgType.eInt, 27, 2));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSetState, TraceData.E_MsgType.eInt, 29, 2));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSetP, TraceData.E_MsgType.eFloat, 31, 6, 2));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSetKp, TraceData.E_MsgType.eFloat, 37, 5, 2));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSetKp, TraceData.E_MsgType.eFloat, 42, 5, 2));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSetSpeed, TraceData.E_MsgType.eInt, 47, 2));
         }
     }
 }
