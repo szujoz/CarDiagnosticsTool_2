@@ -36,8 +36,8 @@ namespace OrientApp
 
             // DEBUG
             //DistSharp = 277cm, InertAccX = 1.52
-            string str1 = "AA209-1050-5023314150227100220010050525512345678912345678912345678912345678912345678912345678912345678912345678912345678912345618912345678991101011000015678912345678910145678912345678912345678912345678912345r";
-            ThreadPool.QueueUserWorkItem(StoreAndDisplayCarData, new object[] { str1 });
+            //string str1 = "AA209-1050-5023314150227100220010050525512345678912345678912345678912345678912345678912345678912345678912345678912345678912345618912345678991101011000015678912345678910145678912345678912345678912345678912345r";
+            //ThreadPool.QueueUserWorkItem(StoreAndDisplayCarData, new object[] { str1 });
 
             //bool b1 = true;
             //bool b2 = false;
@@ -642,6 +642,32 @@ namespace OrientApp
 
             // Trigger sending.
             ThreadPool.QueueUserWorkItem(SendMessageToCar);
+        }
+
+        private void tb_SteeringWheelAngle_TextChanged(object sender, EventArgs e)
+        {
+            var angle = Convert.ToDouble(tb_SteeringWheelAngle.Text);
+            var pic = new Bitmap(OrientApp.Properties.Resources.automotive_steering_wheel2_512);
+
+            pic_SteeringWheel.Image = pic;
+
+            if (angle  >= 10*Math.PI/180)
+            {
+                pic.RotateFlip(RotateFlipType.Rotate270FlipNone);
+            }
+            else if (angle <= -10*Math.PI/180)
+            {
+                pic.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            }
+            
+
+            /*using (Graphics gfx = Graphics.FromImage(pic))
+            {
+                gfx.Clear(Color.White);
+                gfx.DrawImage(pic, new Point(100, 100));
+
+                gfx.RotateTransform(30);
+            }*/
         }
     }
 }

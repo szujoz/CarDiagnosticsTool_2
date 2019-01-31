@@ -1079,6 +1079,7 @@
             this.tb_SteeringWheelAngle.Size = new System.Drawing.Size(50, 20);
             this.tb_SteeringWheelAngle.TabIndex = 42;
             this.tb_SteeringWheelAngle.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb_SteeringWheelAngle.TextChanged += new System.EventHandler(this.tb_SteeringWheelAngle_TextChanged);
             // 
             // label_SteeringWheelAngle
             // 

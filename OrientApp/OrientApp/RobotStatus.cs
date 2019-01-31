@@ -121,7 +121,7 @@ namespace OrientApp
                             InertAngularVelocity.Z = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_RecMsgName.eSteeringWheelAngle:
-                            ServoAngle = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
+                            SteeringWheelAngle = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
                             break;
                         case TraceData.E_RecMsgName.eServoAngle:
                             ServoAngle = Converter.UnwrapFloat(bytes, msg.Offset, msg.Lenght, msg.Decimals);
