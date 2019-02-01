@@ -234,7 +234,7 @@ namespace OrientApp
             tb_BoardMotorServoCurrent.Text = CarStatus.MotorServoCurrent.ToString();
 
             // Line Sensor Data group box.
-            tb_BoardLineLineNumber.Text = CarStatus.LineMainLinePos.ToString();
+            tb_BoardLineLineNumber.Text = CarStatus.LineNumberOfLines.ToString();
             tb_BoardLineMainLinePos.Text = CarStatus.LineMainLinePos.ToString();
             tb_BoardLineSecondLinePos.Text = CarStatus.LineSecLinePos.ToString();
 
