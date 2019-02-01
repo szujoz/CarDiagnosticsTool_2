@@ -83,13 +83,13 @@ namespace OrientApp
             RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunMainSM, TraceData.E_MsgType.eInt, 167, 2));
             RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActState, TraceData.E_MsgType.eInt, 169, 2));
             RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActP, TraceData.E_MsgType.eFloat, 171, 6, 3));
-            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActKp, TraceData.E_MsgType.eFloat, 176, 5, 2));
-            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActKd, TraceData.E_MsgType.eFloat, 181, 5, 2));
-            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActSpeed, TraceData.E_MsgType.eInt, 186, 2));
-            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunGetP, TraceData.E_MsgType.eFloat, 188, 6, 3));
-            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunGetKp, TraceData.E_MsgType.eFloat, 194, 5, 2));
-            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunGetKd, TraceData.E_MsgType.eFloat, 199, 5, 2));
-            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunGetSpeed, TraceData.E_MsgType.eInt, 204, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActKp, TraceData.E_MsgType.eFloat, 177, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActKd, TraceData.E_MsgType.eFloat, 182, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunActSpeed, TraceData.E_MsgType.eInt, 187, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunGetP, TraceData.E_MsgType.eFloat, 189, 6, 3));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunGetKp, TraceData.E_MsgType.eFloat, 195, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunGetKd, TraceData.E_MsgType.eFloat, 200, 5, 2));
+            RecMsgOrder.Add(new TraceData(TraceData.E_RecMsgName.eSRunGetSpeed, TraceData.E_MsgType.eInt, 205, 2));
         }
 
         private void UpdateTxMessageOrder ()
@@ -112,7 +112,7 @@ namespace OrientApp
             TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSetState, TraceData.E_MsgType.eInt, 29, 2));
             TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSetP, TraceData.E_MsgType.eFloat, 31, 6, 2));
             TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSetKp, TraceData.E_MsgType.eFloat, 37, 5, 2));
-            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSetKp, TraceData.E_MsgType.eFloat, 42, 5, 2));
+            TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSetKd, TraceData.E_MsgType.eFloat, 42, 5, 2));
             TxMsgOrder.Add(new TraceData(TraceData.E_TxMsgName.eSRunSetSpeed, TraceData.E_MsgType.eInt, 47, 2));
         }
     }

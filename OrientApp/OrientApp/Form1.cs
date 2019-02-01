@@ -469,6 +469,16 @@ namespace OrientApp
                 Commands.MazeMainSMReset = false;
                 Commands.SRunHardReset = false;
                 Commands.SRunSoftReset = false;
+
+                Thread.Sleep(500);
+
+                // Send again
+                bytes = Commands.GetTxMessageBytes();
+
+                if (serialPort.IsOpen)
+                {
+                    serialPort.Write(Encoding.ASCII.GetString(bytes));
+                }
             }
         }
 
