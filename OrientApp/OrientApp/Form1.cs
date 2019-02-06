@@ -203,7 +203,7 @@ namespace OrientApp
             // Navigation Data group box.
             tb_NaviPoistionNorth.Text = CarStatus.NaviState.Poistion.Y.ToString();
             tb_NaviPoistionEast.Text = CarStatus.NaviState.Poistion.X.ToString();
-            tb_NaviOrientation.Text = CarStatus.NaviState.Orientation.ToString();
+            tb_NaviOrientation.Text = (CarStatus.NaviState.Orientation/Math.PI*180).ToString();
 
             // Encoder group box.
             tb_EncoderVelocity.Text = CarStatus.EncoderVelocity.ToString();
@@ -223,7 +223,7 @@ namespace OrientApp
             tb_InertialAngularVelocityPsi.Text = CarStatus.InertAngularVelocity.Z.ToString();
 
             // Steering Wheel group box.
-            tb_SteeringWheelAngle.Text = CarStatus.SteeringWheelAngle.ToString();
+            tb_SteeringWheelAngle.Text = (CarStatus.SteeringWheelAngle*180/Math.PI).ToString();
             // TODO Servo angle display?
 
             // Motor Board Info group box.
@@ -252,7 +252,7 @@ namespace OrientApp
             // Speed Run Parameters group box.
             tb_SpeedRunParametersActualState.Text = CarStatus.SRunActState.ToString();
             tb_SpeedRunParametersActualP.Text = CarStatus.SRunActP.ToString();
-            tb_SpeedRunParametersActualKp.Text = CarStatus.SRunActKd.ToString();
+            tb_SpeedRunParametersActualKp.Text = CarStatus.SRunActKp.ToString();
             tb_SpeedRunParametersActualKd.Text = CarStatus.SRunActKd.ToString();
             tb_SpeedRunParametersActualSpeed.Text = CarStatus.SRunActSpeed.ToString();
             tb_SpeedRunParametersGetP.Text = CarStatus.SRunGetP.ToString();
@@ -395,6 +395,9 @@ namespace OrientApp
                 serialPort.Open();
                 tb_SerialStatusInfo.Text = "Open";
                 tb_SerialStatusInfo.ForeColor = Color.Green;
+
+                Commands.SRunSetState = 99;
+                ThreadPool.QueueUserWorkItem(SendMessageToCar);
             }
             catch (Exception)
             {
@@ -657,17 +660,18 @@ namespace OrientApp
         private void tb_SteeringWheelAngle_TextChanged(object sender, EventArgs e)
         {
             var angle = Convert.ToDouble(tb_SteeringWheelAngle.Text);
-            var pic = new Bitmap(OrientApp.Properties.Resources.automotive_steering_wheel2_512);
 
-            pic_SteeringWheel.Image = pic;
-
-            if (angle  >= 10*Math.PI/180)
+            if (angle  >= 100*Math.PI/180)
             {
-                pic.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                pic_SteeringWheel.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
             }
-            else if (angle <= -10*Math.PI/180)
+            else if (angle <= 80*Math.PI/180)
             {
-                pic.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                pic_SteeringWheel.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            }
+            else
+            {
+                pic_SteeringWheel.Image.RotateFlip(RotateFlipType.RotateNoneFlipNone);
             }
             
 

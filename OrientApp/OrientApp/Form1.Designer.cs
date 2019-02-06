@@ -417,6 +417,7 @@
             this.tb_SpeedRunParametersSetState.Name = "tb_SpeedRunParametersSetState";
             this.tb_SpeedRunParametersSetState.Size = new System.Drawing.Size(50, 20);
             this.tb_SpeedRunParametersSetState.TabIndex = 54;
+            this.tb_SpeedRunParametersSetState.Text = "0";
             this.tb_SpeedRunParametersSetState.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // checkB_SpeedRunMainSMLap3
@@ -454,6 +455,7 @@
             this.tb_SpeedRunParametersSetKd.Name = "tb_SpeedRunParametersSetKd";
             this.tb_SpeedRunParametersSetKd.Size = new System.Drawing.Size(50, 20);
             this.tb_SpeedRunParametersSetKd.TabIndex = 63;
+            this.tb_SpeedRunParametersSetKd.Text = "3,5";
             this.tb_SpeedRunParametersSetKd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // checkB_SpeedRunMainSMLap1
@@ -472,6 +474,7 @@
             this.tb_SpeedRunParametersSetP.Name = "tb_SpeedRunParametersSetP";
             this.tb_SpeedRunParametersSetP.Size = new System.Drawing.Size(50, 20);
             this.tb_SpeedRunParametersSetP.TabIndex = 57;
+            this.tb_SpeedRunParametersSetP.Text = "0,75";
             this.tb_SpeedRunParametersSetP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // checkB_SpeedRunMainSMOvertaking
@@ -566,6 +569,7 @@
             this.tb_SpeedRunParametersSetKp.Name = "tb_SpeedRunParametersSetKp";
             this.tb_SpeedRunParametersSetKp.Size = new System.Drawing.Size(50, 20);
             this.tb_SpeedRunParametersSetKp.TabIndex = 60;
+            this.tb_SpeedRunParametersSetKp.Text = "0.02";
             this.tb_SpeedRunParametersSetKp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label_SpeedRunParametersP
@@ -675,6 +679,7 @@
             this.tb_SpeedRunParametersSetSpeed.Name = "tb_SpeedRunParametersSetSpeed";
             this.tb_SpeedRunParametersSetSpeed.Size = new System.Drawing.Size(50, 20);
             this.tb_SpeedRunParametersSetSpeed.TabIndex = 66;
+            this.tb_SpeedRunParametersSetSpeed.Text = "18";
             this.tb_SpeedRunParametersSetSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tb_SpeedRunParametersActualP
@@ -1786,6 +1791,7 @@
             this.tb_MazeParametersSetState.Name = "tb_MazeParametersSetState";
             this.tb_MazeParametersSetState.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetState.TabIndex = 70;
+            this.tb_MazeParametersSetState.Text = "0";
             this.tb_MazeParametersSetState.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn_MazeParametersSetStateTo
@@ -1839,6 +1845,7 @@
             this.tb_MazeParametersSetSpeed.Name = "tb_MazeParametersSetSpeed";
             this.tb_MazeParametersSetSpeed.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetSpeed.TabIndex = 63;
+            this.tb_MazeParametersSetSpeed.Text = "18";
             this.tb_MazeParametersSetSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tb_MazeParametersSetKD
@@ -1847,6 +1854,7 @@
             this.tb_MazeParametersSetKD.Name = "tb_MazeParametersSetKD";
             this.tb_MazeParametersSetKD.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetKD.TabIndex = 62;
+            this.tb_MazeParametersSetKD.Text = "3,5";
             this.tb_MazeParametersSetKD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tb_MazeParametersSetKP
@@ -1855,6 +1863,7 @@
             this.tb_MazeParametersSetKP.Name = "tb_MazeParametersSetKP";
             this.tb_MazeParametersSetKP.Size = new System.Drawing.Size(50, 20);
             this.tb_MazeParametersSetKP.TabIndex = 61;
+            this.tb_MazeParametersSetKP.Text = "0,02";
             this.tb_MazeParametersSetKP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label_MazeParametersActualState
